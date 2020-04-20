@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Use the title from a page's frontmatter if it has one -->
+<title><%= current_page.data.title || "Middleman" %></title>
+
+<%#= partial "/common/meta" %>
+<%#= partial "/common/favicon" %>
+<%= stylesheet_link_tag "site" %>
+<%#= javascript_include_tag "../js/vendor/jquery/jquery.min.js" %>
+<%#= javascript_include_tag "../js/vendor/popper/popper.js" %>
+<%#= javascript_include_tag "../js/vendor/bootstrap/bootstrap.min.js" %>
+<%= javascript_include_tag "vendor" %>
+</head>
+
+<body>
+
+<!-- Wrapper -->
+<!-- <div class="d-flex" id="wrapper"> -->
+
+<!-- Sidebar -->
+<%#= partial "/common/sidebar_nav" %>
+<!-- End of Sidebar -->
+
+<!-- Content Wrapper -->
+<!-- <div id="page-content-wrapper"> -->
+
+<!-- Topbar -->
+<%#= partial "/common/topbar_nav" %>
+<!-- End of Topbar -->
+
+<!-- Main Content -->
+<!-- <div class="container-fluid"> -->
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+        <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown button
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= yield %>
+<!-- </div> -->
+<!-- End of Main Content -->
+
+<!-- </div> -->
+<!-- End of Content Wrapper -->
+<!-- </div> -->
+<!-- End of Wrapper -->
+
+<%= javascript_include_tag "site" %>
+
+</body>
+</html>
