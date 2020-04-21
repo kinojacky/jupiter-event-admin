@@ -1,19 +1,18 @@
 // Vendor components
 // @import "vendors/animate/animate.css";
 @import "vendors/bootstrap/bootstrap.css";
-// @import "vendors/font-awesome/all.css";
 // @import "vendors/lightbox/lightbox.css";
 // @import "vendors/owlcarousel/owl.carousel.css";
 
 // default pages setting
-// @import "setting/includes";
-// @import "layouts/base";
+@import "setting/includes";
+@import "layouts/base";
 
 // pages setting
-// @import "pages/includes";
+@import "pages/includes";
 
 // common pages setting
-// @import "common/includes";
+@import "common/includes";
 
 // components hack setting
-// @import "components/includes";
+@import "components/includes";

@@ -6,32 +6,38 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Use the title from a page's frontmatter if it has one -->
-<title><%= current_page.data.title || "Middleman" %></title>
+<title><%= current_page.data.title || "Jupiter" %></title>
 
+<%= partial "/common/meta" %>
+<%= partial "/common/favicon" %>
 <%= stylesheet_link_tag "site" %>
 <%= javascript_include_tag "vendor" %>
 </head>
 
 <body>
 
-<div class="container">
-  <div class="row">
-    <div class="col-12">
+<!-- Wrapper -->
+<div id="wrapper">
 
-        <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= partial "/common/sidebar_nav" %>
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+<%= partial "/common/topbar_nav" %>
+
+<!-- Main Content -->
+<div id="content" class="container-fluid">
 <%= yield %>
+</div>
+<!-- End of Main Content -->
+
+<%= partial "/common/footer" %>
+
+</div>
+<!-- End of Content Wrapper -->
+</div>
+<!-- End of Wrapper -->
 
 <%= javascript_include_tag "site" %>
 

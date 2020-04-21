@@ -1,8 +1,14 @@
-# Minimum X Template
+# Jupiter Event System Template
 
 This is a ready make Middleman frondend template. The pakage come with common stylesheets and javascript plug-ins.
 
-## Project code name: Cosmos Firebird
+## Project code name: Jupiter Callisto
+
+Jupiter: System Admin Panel
+Io: System App Module Management
+Europa: Event CRM Admin Panel
+Ganymede: Mobile Web App
+Callisto: Event Main Website
 
 ## System Requirement
 
@@ -11,25 +17,24 @@ This is a ready make Middleman frondend template. The pakage come with common st
 
 ## Stylesheets:
 
-- Bootstrap v4.2.1
-- Font Awesome v5.8.1
-- Ionicons v4.5.5
+- Bootstrap v4.4.1
 - Basic lightbox
 - Owl Carousel v2.3.4
 - animate v3.5.2
 
 ## JavaScript
 
-- Bootstrap v4.2.1
-- Font Awesome v5.8.1
-- Ionicons v4.5.5
+- Bootstrap v4.4.1
 - jQuery.counterup.js v2.1.0
 - jQuery Easing v1.4.1
-- Isotope PACKAGED v3.0.5
 - jQuery v3.3.1
 - Lightbox v2.10.0
-- Mobile-Navigation
 - Owl Carousel v2.3.4
 - Popper v1.14.7
 - Waypoints v4.0.1
 - WOW.js - v1.3.0
+
+## Fonts
+
+- Font Awesome v5.13.0
+- Google Font

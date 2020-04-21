@@ -20,16 +20,16 @@ h1, h2, h3, h4, h5, h6,
   font-weight: bold;
 }
 
-// #wrapper {
-//   display: flex;
-//
-//   #content-wrapper {
-//     background-color: #f8f9fc;
-//     width: 100%;
-//     overflow-x: hidden;
-//
-//     #content {
-//       flex: 1 0 auto;
-//     }
-//   }
-// }
+#wrapper {
+  display: flex;
+
+  #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
+
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
