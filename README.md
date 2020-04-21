@@ -2,7 +2,7 @@
 
 This is a ready make Middleman frondend template. The pakage come with common stylesheets and javascript plug-ins.
 
-## Project code name: Jupiter Callisto
+## Project code name: Jupiter
 
 Jupiter: System Admin Panel
 Io: System App Module Management
