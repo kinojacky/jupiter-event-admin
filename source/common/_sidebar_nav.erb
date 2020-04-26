@@ -1,6 +1,7 @@
 <!-- Sidebar -->
-<div class="sidebar-dark" id="sidebar-wrapper">
-  <div class="sidebar-heading">Start Bootstrap </div>
+<div class="navbar-nav accordion" id="sidebar-wrapper">
+  <div class="sidebar-brand-logo">Jupiter</div>
+
   <ul class="list-group list-group-flush">
 
     <li class="nav-item">
@@ -12,30 +13,71 @@
 
     <li class="nav-item">
       <a href="#" class="nav-link">
+        <i class="fas fa-fw fa-chart-bar"></i>
+        <span>Statistics</span>
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#eventAppCollapse" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="eventAppCollapse">
         <i class="fas fa-fw fa-share-square"></i>
         <span>Event App</span>
       </a>
+      <div class="collapse animated fadeIn faster" id="eventAppCollapse" data-parent="#sidebar-wrapper">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Frontend Shortcut:</h6>
+          <a class="collapse-item" href="#">Home Page</a>
+          <a class="collapse-item" href="#">Registration</a>
+          <a class="collapse-item" href="#">Guest Login</a>
+          <a class="collapse-item" href="#">Exhibitor</a>
+        </div>
+      </div>
     </li>
 
+    <hr class="sidebar-divider">
+
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a class="nav-link collapsed" href="#guestsCollapse" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="guestsCollapse">
         <i class="fas fa-fw fa-users"></i>
         <span>Guests</span>
       </a>
+      <div class="collapse animated fadeIn faster" id="guestsCollapse" data-parent="#sidebar-wrapper">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Frontend Shortcut:</h6>
+          <a class="collapse-item" href="#">Group</a>
+          <a class="collapse-item" href="#">Guest List</a>
+          <a class="collapse-item" href="#">Add Guest</a>
+        </div>
+      </div>
     </li>
 
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a class="nav-link collapsed" href="#emailCollapse" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="emailCollapse">
         <i class="fas fa-fw fa-envelope"></i>
         <span>Email</span>
       </a>
+      <div class="collapse animated fadeIn faster" id="emailCollapse" data-parent="#sidebar-wrapper">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Frontend Shortcut:</h6>
+          <a class="collapse-item" href="#">Templates</a>
+          <a class="collapse-item" href="#">Blast Status</a>
+          <a class="collapse-item" href="#">Exhibitor</a>
+        </div>
+      </div>
     </li>
 
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a class="nav-link collapsed" href="#smsCollapse" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="smsCollapse">
         <i class="fas fa-fw fa-sms"></i>
         <span>SMS</span>
       </a>
+      <div class="collapse animated fadeIn faster" id="smsCollapse" data-parent="#sidebar-wrapper">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="#">Templates</a>
+          <a class="collapse-item" href="#">Blast Status</a>
+          <a class="collapse-item" href="#">Log</a>
+        </div>
+      </div>
     </li>
 
     <li class="nav-item">
@@ -45,12 +87,7 @@
       </a>
     </li>
 
-    <li class="nav-item">
-      <a href="#" class="nav-link">
-        <i class="fas fa-fw fa-chart-bar"></i>
-        <span>Statistics</span>
-      </a>
-    </li>
+    <hr class="sidebar-divider">
 
     <li class="nav-item">
       <a href="#" class="nav-link">
@@ -66,11 +103,23 @@
       </a>
     </li>
 
+    <hr class="sidebar-divider">
+
+    <div class="sidebar-heading">Settings</div>
+
     <li class="nav-item">
-      <a href="#" class="nav-link">
+      <a class="nav-link collapsed" href="#settingsCollapse" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="settingsCollapse">
         <i class="fas fa-fw fa-cog"></i>
-        <span>Event</span>
+        <span>Event Settings</span>
       </a>
+      <div class="collapse animated fadeIn faster" id="settingsCollapse" data-parent="#sidebar-wrapper">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="#">Setting</a>
+          <a class="collapse-item" href="#">Advanced</a>
+          <a class="collapse-item" href="#">Report</a>
+          <a class="collapse-item" href="#">SMS</a>
+        </div>
+      </div>
     </li>
 
   </ul>

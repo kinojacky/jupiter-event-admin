@@ -1,4 +1,6 @@
 .topbar {
+	height: 4.375rem;
+
 	.nav-item.dropdown {
 		.dropdown-toggle {
 			&::after {
@@ -13,6 +15,7 @@
 			}
 		}
 	}
+
 	.nav-item.dropdown.show {
 		.dropdown-toggle {
 			&::after {
@@ -20,6 +23,7 @@
 			}
 		}
 	}
+
 	.nav-item {
 		.nav-link {
 			position: relative;
@@ -46,7 +50,7 @@
 			outline: none;
 		}
 	}
-	height: 4.375rem;
+
 	#sidebarToggleTop {
 		height: 2.5rem;
 		width: 2.5rem;
@@ -57,6 +61,7 @@
 			background-color: #dddfeb;
 		}
 	}
+
 	.navbar-search {
 		width: 25rem;
 		input {
@@ -64,12 +69,14 @@
 			height: auto;
 		}
 	}
+
 	.topbar-divider {
 		width: 0;
 		border-right: 1px solid #e3e6f0;
 		height: calc(4.375rem - 2rem);
 		margin: auto 1rem;
 	}
+
 	.dropdown {
 		position: static;
 		.dropdown-menu {
@@ -77,6 +84,7 @@
 			right: 0.75rem;
 		}
 	}
+
 	.dropdown-list {
 		padding: 0;
 		border: none;
@@ -125,6 +133,7 @@
 		}
 	}
 }
+
 .topbar.navbar-light {
 	.navbar-nav {
 		.nav-item {
@@ -150,6 +159,7 @@
 				right: 0;
 			}
 		}
+		
 		.search-menu.dropdown {
 			position: relative;
 			.dropdown-menu {
@@ -157,6 +167,7 @@
         right: -10rem;
 			}
 		}
+		
 		.dropdown-list {
 			width: 20rem !important;
 			.dropdown-item {

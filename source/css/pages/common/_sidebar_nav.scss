@@ -1,7 +1,3 @@
-body {
-  overflow-x: hidden;
-}
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
@@ -12,37 +8,112 @@ body {
   -o-transition: margin 0.25s ease-out;
   transition: margin 0.25s ease-out;
 
-  .sidebar-heading {
+  .sidebar-brand-logo {
     padding: 0.875rem 1.25rem;
     font-size: 1.2rem;
+    font-weight: 800;
+  }
+
+  .sidebar-heading {
+    padding: 0.875rem 1.25rem 0;
+    font-weight: 800;
+    font-size: .65rem;
+    color: rgba(255, 255, 255, .4);
   }
 
   .list-group {
     width: 15rem;
   }
 
-  .nav-link {
-    position: relative;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    color: rgba(255, 255, 255, .8);
-
-    i {
-      margin-right: .25rem;
-      color: rgba(255, 255, 255, .3);
-    }
-
-    span {
-      font-size: .85rem;
-      display: inline;
-    }
-
-    &:hover {
-      color: #ffffff;
-    }
+  hr.sidebar-divider {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+    margin: 0 1rem;
   }
 
-  &.sidebar-dark {}
+  .nav-item {
+    .collapsing {
+      display: none;
+      transition: none;
+    }
+
+    .collapse,
+    .collapsing {
+      margin: 0 1rem;
+
+      .collapse-inner {
+        padding: .5rem 0;
+        min-width: 10rem;
+        font-size: .85rem;
+        margin: 0 0 1rem 0;
+
+        .collapse-header {
+          margin: 0;
+          white-space: nowrap;
+          padding: .5rem 1.5rem;
+          text-transform: uppercase;
+          font-weight: 800;
+          font-size: .65rem;
+          color: #b7b9cc;
+        }
+
+        .collapse-item {
+          padding: .5rem 1rem;
+          margin: 0 .5rem;
+          display: block;
+          color: #3a3b45;
+          text-decoration: none;
+          border-radius: .35rem;
+          white-space: nowrap;
+
+          &:hover {
+            background-color: #eaecf4;
+          }
+        }
+      }
+    }
+
+    .nav-link {
+      position: relative;
+      display: block;
+      padding: 0.75rem 1.25rem;
+      color: rgba(255, 255, 255, .8);
+
+      i {
+        margin-right: .25rem;
+        color: rgba(255, 255, 255, .3);
+      }
+
+      span {
+        font-size: .85rem;
+        display: inline;
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: #ffffff;
+
+        i {
+          color: #ffffff;
+        }
+      }
+
+      &[data-toggle=collapse]::after {
+        width: 1rem;
+        text-align: center;
+        float: right;
+        vertical-align: 0;
+        border: 0;
+        font-weight: 900;
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free'
+      }
+
+      &[data-toggle=collapse].collapsed::after {
+        content: '\f105'
+      }
+    }
+  }
 }
 
 #wrapper.toggled {
@@ -50,6 +121,7 @@ body {
     margin-left: 0;
   }
 }
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
