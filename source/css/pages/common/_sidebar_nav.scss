@@ -1,6 +1,6 @@
 #sidebar-wrapper {
   min-height: 100vh;
-  margin-left: -19rem;
+  margin-left: -18rem;
   color: #ffffff;
   background-color: #0747a6;
   -webkit-transition: margin 0.25s ease-out;
@@ -10,20 +10,31 @@
 }
 
 #sidebar-main {
-  // min-height: 100vh;
-  // margin-left: -4rem;
-  // color: #ffffff;
-  // background-color: #0747a6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  // flex-shrink: 0;
+  justify-content: space-between;
 
-  .sidebar-brand-icon {
-    padding: 0.875rem;
-    font-size: 1.2rem;
-    font-weight: 800;
+  a {
+    .sidebar-brand-icon {
+      padding: 0.875rem;
+
+      img {
+        width: 50px;
+
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 50%;
+        }
+      }
+    }
   }
 
   .list-group {
     width: 4rem;
-    list-style: none;
   }
 
   hr.sidebar-divider {
@@ -32,15 +43,13 @@
   }
 
   .nav-item {
-
     .nav-link {
       position: relative;
       display: block;
-      padding: 0.875rem 1.25rem;
+      padding: 0.75rem 1.25rem;
       color: #ffffff;
 
       i {
-        margin-right: .25rem;
         color: rgba(255, 255, 255, .3);
       }
 
@@ -58,27 +67,26 @@
 }
 
 #sidebar-secondary {
-  .sidebar-brand-logo {
-    padding: 0.875rem 1.25rem;
-    font-size: 1.2rem;
-    font-weight: 800;
+  .sidebar-brand-name {
+    padding: 0.875rem 1.25rem 0.875rem 0.875rem;
+    font-size: 1.5rem;
   }
 
   .sidebar-heading {
-    padding: 0.875rem 1.25rem 0;
+    padding: 0.875rem 1.25rem 0.5rem;
     font-weight: 800;
     font-size: .65rem;
     color: rgba(255, 255, 255, .4);
   }
 
   .list-group {
-    width: 15rem;
+    width: 14rem;
     list-style: none;
   }
 
   hr.sidebar-divider {
     border-top: 1px solid rgba(255, 255, 255, .15);
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
   }
 
   .nav-item {
@@ -89,7 +97,7 @@
 
     .collapse,
     .collapsing {
-      margin: 0 1rem;
+      margin: 0.5rem 1rem 0 1rem;
 
       .collapse-inner {
         padding: .5rem 0;
@@ -126,11 +134,11 @@
     .nav-link {
       position: relative;
       display: block;
-      padding: 0.75rem 1.25rem;
+      padding: 0.75rem 1.25rem  0.75rem  0.75rem;
       color: rgba(255, 255, 255, .8);
 
       i {
-        margin-right: .25rem;
+        margin-right: .55rem;
         color: rgba(255, 255, 255, .3);
       }
 
@@ -168,37 +176,19 @@
 }
 
 #wrapper.toggled {
-  // #sidebar-main,
-  // #sidebar-secondary {
-  //   margin-left: 0;
-  // }
   #sidebar-wrapper {
     margin-left: 0;
   }
 }
 
 @media (min-width: 768px) {
-  // #sidebar-main,
-  // #sidebar-secondary {
-  //   margin-left: 0;
-  // }
   #sidebar-wrapper {
     margin-left: 0;
   }
 
   #wrapper.toggled {
-    // #sidebar-main,
-    // #sidebar-secondary {
-    //   margin-left: -20rem;
-    // }
-    // #sidebar-main {
-    //   margin-left: -3rem;
-    // }
-    // #sidebar-secondary {
-    //   margin-left: -15rem;
-    // }
     #sidebar-wrapper {
-      margin-left: -19rem;
+      margin-left: -18rem;
     }
   }
 }
