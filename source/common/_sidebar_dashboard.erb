@@ -5,15 +5,10 @@
     <div class="icon-group-top">
       <a href="#">
         <div class="sidebar-brand-icon">
-          <img src="/images/logo/brand_logo_sm.png" alt="Brand Logo" class="img-fluid">
+          <img src="/images/logo/brand_logo_sm.png" alt="Brand Logo" class="img-fluid" data-toggle="tooltip" data-placement="right" title="Jupiter Home">
         </div>
       </a>
       <ul class="list-group">
-        <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="material-icons" data-toggle="tooltip" data-placement="right" title="Search Event">search</i>
-          </a>
-        </li>
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="material-icons" data-toggle="tooltip" data-placement="right" title="Switch Client">sync_alt</i>
@@ -31,13 +26,26 @@
         </li>
       </ul>
     </div>
+
     <div class="icon-group-bottom">
+      <ul class="list-group">
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons" data-toggle="tooltip" data-placement="right" title="Help">help_outline</i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons" data-toggle="tooltip" data-placement="right" title="System Settings">settings</i>
+          </a>
+        </li>
+      </ul>
       <small class="nav-link text-white-50">v1.0.0</small>
     </div>
   </div>
 
   <!-- Secondary Sidebar -->
-  <div class="accordion" id="sidebar-secondary">
+  <div class="sidebar-light accordion" id="sidebar-secondary">
     <div class="sidebar-brand-name">Jupiter</div>
 
     <ul class="list-group">
@@ -53,7 +61,7 @@
           <i class="material-icons">apps</i>
           <span>Event App</span>
         </a>
-        <div class="collapse animated fadeIn faster" id="eventAppCollapse" data-parent="#sidebar-secondary">
+        <div class="collapse shadow-sm animated fadeIn faster" id="eventAppCollapse" data-parent="#sidebar-secondary">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Frontend Shortcut:</h6>
             <a class="collapse-item" href="#">Home Page</a>
@@ -71,7 +79,7 @@
           <i class="material-icons">people</i>
           <span>Guests</span>
         </a>
-        <div class="collapse animated fadeIn faster" id="guestsCollapse" data-parent="#sidebar-secondary">
+        <div class="collapse shadow-sm animated fadeIn faster" id="guestsCollapse" data-parent="#sidebar-secondary">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="#">Guest List</a>
             <a class="collapse-item" href="#">Group</a>
@@ -85,7 +93,7 @@
           <i class="material-icons">mail</i>
           <span>Email</span>
         </a>
-        <div class="collapse animated fadeIn faster" id="emailCollapse" data-parent="#sidebar-secondary">
+        <div class="collapse shadow-sm animated fadeIn faster" id="emailCollapse" data-parent="#sidebar-secondary">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="#">Templates</a>
             <a class="collapse-item" href="#">Blast Status</a>
@@ -98,7 +106,7 @@
           <i class="material-icons">textsms</i>
           <span>SMS</span>
         </a>
-        <div class="collapse animated fadeIn faster" id="smsCollapse" data-parent="#sidebar-secondary">
+        <div class="collapse shadow-sm animated fadeIn faster" id="smsCollapse" data-parent="#sidebar-secondary">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="#">Templates</a>
             <a class="collapse-item" href="#">Blast Status</a>
@@ -130,7 +138,7 @@
           <i class="material-icons">tune</i>
           <span>Event Settings</span>
         </a>
-        <div class="collapse animated fadeIn faster" id="settingsCollapse" data-parent="#sidebar-secondary">
+        <div class="collapse shadow-sm animated fadeIn faster" id="settingsCollapse" data-parent="#sidebar-secondary">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="#">Setting</a>
             <a class="collapse-item" href="#">Advanced</a>

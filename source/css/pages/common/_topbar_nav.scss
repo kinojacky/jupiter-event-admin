@@ -31,6 +31,7 @@
 			display: flex;
 			align-items: center;
 			padding: 0 0.75rem;
+
 			.badge-counter {
 				position: absolute;
 				transform: scale(0.7);
@@ -38,14 +39,17 @@
 				right: .25rem;
 				margin-top: -.25rem;
 			}
+
 			.img-profile {
 				height: 2rem;
 				width: 2rem;
 			}
+
 			&:focus {
 				outline: none;
 			}
 		}
+
 		&:focus {
 			outline: none;
 		}
@@ -54,9 +58,11 @@
 	#sidebarToggleTop {
 		height: 2.5rem;
 		width: 2.5rem;
+
 		&:hover {
 			background-color: #eaecf4;
 		}
+
 		&:active {
 			background-color: #dddfeb;
 		}
@@ -104,14 +110,17 @@
 			border-right: 1px solid #e3e6f0;
 			border-bottom: 1px solid #e3e6f0;
 			line-height: 1.3rem;
+
 			.dropdown-list-image {
 				position: relative;
 				height: 2.5rem;
 				width: 2.5rem;
+
 				img {
 					height: 2.5rem;
 					width: 2.5rem;
 				}
+
 				.status-indicator {
 					background-color: #eaecf4;
 					height: 0.75rem;
@@ -126,6 +135,7 @@
 			.text-truncate {
 				max-width: 10rem;
 			}
+
 			&:active {
 				background-color: #eaecf4;
 				color: #3a3b45;
@@ -139,9 +149,11 @@
 		.nav-item {
 			.nav-link {
 				color: #d1d3e2;
+
 				&:hover {
 					color: #b7b9cc;
 				}
+				
 				&:active {
 					color: #858796;
 				}
@@ -159,7 +171,7 @@
 				right: 0;
 			}
 		}
-		
+
 		.search-menu.dropdown {
 			position: relative;
 			.dropdown-menu {
@@ -167,7 +179,7 @@
         right: -10rem;
 			}
 		}
-		
+
 		.dropdown-list {
 			width: 20rem !important;
 			.dropdown-item {

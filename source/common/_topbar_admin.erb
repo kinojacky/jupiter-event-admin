@@ -1,0 +1,79 @@
+<!-- Topbar -->
+<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+  <!-- Sidebar Toggle (Topbar) -->
+  <button id="menu-toggle" class="btn btn-link d-lg-none rounded-circle mr-3">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Topbar Search -->
+  <form class="navbar-search d-none d-md-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100">
+    <div class="input-group">
+      <input type="text" class="form-control bg-light border-0" placeholder="Search for event..." aria-label="Search" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-primary rounded-right" type="button">
+          <i class="fas fa-search fa-sm"></i>
+        </button>
+      </div>
+      <a href="#" class="btn text-primary">Advanced</a>
+    </div>
+  </form>
+
+  <!-- Topbar Navbar -->
+  <ul class="navbar-nav ml-auto">
+
+    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+    <li class="nav-item search-menu dropdown no-arrow d-md-none">
+      <a class="nav-link dropdown-toggle" href="#!" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-search fa-fw"></i>
+      </a>
+      <!-- Dropdown - Messages -->
+      <div class="dropdown-menu dropdown-menu-right p-3 shadow animated fadeIn faster" aria-labelledby="searchDropdown">
+        <form class="form-inline mr-auto w-100 navbar-search">
+          <div class="input-group w-100">
+            <input type="text" class="form-control bg-light border-0" placeholder="Search for event..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </li>
+
+    <!-- Nav Item - Notifications Settings -->
+    <li class="nav-item no-arrow">
+      <a class="nav-link" href="#" title="System Settings">
+        <i class="material-icons">notifications</i>
+        <span class="badge badge-pill badge-danger badge-counter">3</span>
+      </a>
+    </li>
+
+    <div class="topbar-divider d-none d-sm-block"></div>
+
+    <!-- Nav Item - User Information -->
+    <li class="nav-item dropdown no-arrow">
+      <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="mr-2 d-none d-lg-inline small text-secondary">Jacky Brown</span>
+        <i class="material-icons">account_circle</i>
+      </a>
+      <!-- Dropdown - User Information -->
+      <div class="dropdown-menu dropdown-menu-right shadow animated fadeIn faster" aria-labelledby="userDropdown">
+        <a class="dropdown-item" href="#">
+          <i class="material-icons mr-2 text-secondary">person</i> Profile
+        </a>
+        <a class="dropdown-item" href="#">
+          <i class="material-icons mr-2 text-secondary">list</i> Activity Log
+        </a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item text-danger" href="javascript:void(0)" data-toggle="modal" data-target="#logoutModal">
+          <i class="material-icons mr-2">exit_to_app</i> Logout
+        </a>
+      </div>
+    </li>
+
+  </ul>
+
+</nav>
+<!-- End of Topbar -->

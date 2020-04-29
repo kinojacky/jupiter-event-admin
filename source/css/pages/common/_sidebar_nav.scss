@@ -2,7 +2,6 @@
   min-height: 100vh;
   margin-left: -18rem;
   color: #ffffff;
-  background-color: #0747a6;
   -webkit-transition: margin 0.25s ease-out;
   -moz-transition: margin 0.25s ease-out;
   -o-transition: margin 0.25s ease-out;
@@ -14,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  background-color: #0747a6;
 
   a {
     .sidebar-brand-icon {
@@ -67,6 +67,7 @@
 
 #sidebar-secondary {
   padding-bottom: 20px;
+  background-color: #0747a6;
 
   .sidebar-brand-name {
     padding: 0.875rem 1.25rem 0.875rem 0.875rem;
@@ -74,9 +75,10 @@
   }
 
   .sidebar-heading {
-    padding: 0.875rem 1.25rem 0.5rem;
+    padding: 0.875rem 1rem 0.5rem;
     font-weight: 800;
     font-size: .65rem;
+    text-transform: uppercase;
     color: rgba(255, 255, 255, .4);
   }
 
@@ -172,6 +174,41 @@
       &[data-toggle=collapse].collapsed::after {
         content: '\f105'
       }
+    }
+  }
+}
+
+#sidebar-secondary.sidebar-light {
+  background-color: #f5f6f7;
+  color: rgb(66, 82, 110);
+  border-right: 1px solid #dfdfdf;
+
+  .sidebar-heading {
+    color: rgba(66, 82, 110, .8);
+  }
+
+  hr.sidebar-divider {
+    border-top: 1px solid rgba(66, 82, 110, .3);
+  }
+
+  .nav-item {
+    .nav-link {
+      color: rgba(66, 82, 110, .8);
+
+      i {
+        color: rgba(66, 82, 110, .3);
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: #172B4D;
+
+        i {
+          color: #172B4D;
+        }
+      }
+
     }
   }
 }
