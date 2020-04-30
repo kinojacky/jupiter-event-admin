@@ -1,0 +1,40 @@
+#LoginHome {
+  background-color: #0747a6;
+
+  .material-icons {
+    padding-bottom: 5px;
+  }
+
+  .alert.logout {
+    text-align: left;
+  }
+
+  .bg-login-image {
+    background: url("../../../images/login/login-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-register-image {
+    background: url("../../../images/login/login-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-password-image {
+    background: url("../../../images/login/password-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-authentication-image {
+    background: url("../../../images/login/authentication-bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .pincode {
+    color: #cccccc;
+    letter-spacing: 10px;
+  }
+}

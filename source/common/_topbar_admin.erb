@@ -12,10 +12,9 @@
       <input type="text" class="form-control bg-light border-0" placeholder="Search for event..." aria-label="Search" aria-describedby="basic-addon2">
       <div class="input-group-append">
         <button class="btn btn-primary rounded-right" type="button">
-          <i class="fas fa-search fa-sm"></i>
+          <i class="material-icons">search</i> Event
         </button>
       </div>
-      <a href="#" class="btn text-primary">Advanced</a>
     </div>
   </form>
 
@@ -34,7 +33,7 @@
             <input type="text" class="form-control bg-light border-0" placeholder="Search for event..." aria-label="Search" aria-describedby="basic-addon2">
             <div class="input-group-append">
               <button class="btn btn-primary" type="button">
-                <i class="fas fa-search fa-sm"></i>
+                <i class="material-icons">search</i> Event
               </button>
             </div>
           </div>
@@ -72,8 +71,29 @@
         </a>
       </div>
     </li>
-
   </ul>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content m-3">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="logoutTitle">Ready to Leave?</h5>
+        </div>
+        <div class="modal-body">
+          <div class="py-2">Select "Logout" below if you are ready to end your current session.</div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">
+            <i class="material-icons text-white-50">close</i> Cancel
+          </button>
+          <a href="/admin/login/login.html" class="btn btn-danger">
+            <i class="material-icons text-white-50">exit_to_app</i> Logout
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </nav>
 <!-- End of Topbar -->

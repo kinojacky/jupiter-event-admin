@@ -1,3 +1,4 @@
+// Sidebar Menu Toggle Wrapper
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -18rem;
@@ -8,6 +9,7 @@
   transition: margin 0.25s ease-out;
 }
 
+// Main Sidebar Menu
 #sidebar-main {
   display: flex;
   flex-direction: column;
@@ -65,9 +67,9 @@
   }
 }
 
+// Secondary Sidebar Menu
 #sidebar-secondary {
   padding-bottom: 20px;
-  background-color: #0747a6;
 
   .sidebar-brand-name {
     padding: 0.875rem 1.25rem 0.875rem 0.875rem;
@@ -79,7 +81,6 @@
     font-weight: 800;
     font-size: .65rem;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, .4);
   }
 
   .list-group {
@@ -88,7 +89,6 @@
   }
 
   hr.sidebar-divider {
-    border-top: 1px solid rgba(255, 255, 255, .15);
     margin: 0.5rem 1rem;
   }
 
@@ -138,26 +138,14 @@
       position: relative;
       display: block;
       padding: 0.75rem 1.25rem  0.75rem  0.75rem;
-      color: rgba(255, 255, 255, .8);
 
       i {
         margin-right: .55rem;
-        color: rgba(255, 255, 255, .3);
       }
 
       span {
         font-size: .85rem;
         display: inline;
-      }
-
-      &:active,
-      &:focus,
-      &:hover {
-        color: #ffffff;
-
-        i {
-          color: #ffffff;
-        }
       }
 
       &[data-toggle=collapse]::after {
@@ -178,6 +166,7 @@
   }
 }
 
+// Secondary Sidebar Color Setting
 #sidebar-secondary.sidebar-light {
   background-color: #f5f6f7;
   color: rgb(66, 82, 110);
@@ -208,7 +197,38 @@
           color: #172B4D;
         }
       }
+    }
+  }
+}
 
+#sidebar-secondary.sidebar-dark {
+  background-color: #0747a6;
+
+  .sidebar-heading {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  hr.sidebar-divider {
+    border-top: 1px solid rgba(255, 255, 255, .15);
+  }
+
+  .nav-item {
+    .nav-link {
+      color: #ffffff;
+
+      i {
+        color: rgba(255, 255, 255, .3);
+      }
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: #ffffff;
+
+        i {
+          color: #ffffff;
+        }
+      }
     }
   }
 }

@@ -1,0 +1,15 @@
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-weight: 100;
+  color: #ccd1d9;
+  opacity: 1; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-weight: 100;
+  color: #ccd1d9;
+}
+
+.form-control::-webkit-input-placeholder { /* Microsoft Edge */
+  font-weight: 100;
+  color: #ccd1d9;
+}
