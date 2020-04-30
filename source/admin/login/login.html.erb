@@ -12,14 +12,23 @@ layout: login
             <!-- Nested Row within Card Body -->
             <div class="row">
               <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-              <div class="col-lg-6 text-center p-5">
-                <img src="/images/logo/color_logo.png" alt="Brand Logo" class="imgs-fluid" style="max-width: 180px"><br/>
-                <p class="text-black-50 mb-3"><small>Too big to think</small></p>
+              <div class="col-lg-6 p-5">
+                <div class="text-center">
+                  <img src="/images/logo/color_logo.png" alt="Brand Logo" class="imgs-fluid" style="max-width: 180px"><br/>
+                  <p class="text-black-50 mb-3"><small>Too big to think</small></p>
 
-                <h4 class="text-secondary mb-4"><i class="material-icons md-36 text-dark">exit_to_app</i> Welcome Back!</h4>
+                  <h5 class="text-secondary mb-4"><i class="material-icons md-36 text-dark">exit_to_app</i> Welcome Back!</h5>
+                </div>
 
-                <div class="alert alert-danger logout alert-dismissible fade show" role="alert">
+                <div class="alert alert-danger notice alert-dismissible fade show" role="alert">
                   Thank you, you have been logged out.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                  </button>
+                </div>
+
+                <div class="alert alert-danger notice alert-dismissible fade show" role="alert">
+                  Sorry, Incorrect email address and / or password.
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><i class="material-icons">close</i></span>
                   </button>
@@ -35,14 +44,11 @@ layout: login
                   <a href="otp_input.html" class="btn btn-primary btn-block">
                     Login
                   </a>
-                  <p class="text-center text-secondary">
-                    <small>This is just a demo page, click LOGIN to continue.</small>
-                  </p>
                 </form>
 
                 <hr>
                 <div class="text-center">
-                  <a class="small" href="forgot_password.html">Forgot Password?</a>
+                  <a class="small" href="forgot_password.html"><i class="material-icons text-black-50 mr-1">help_outline</i>Forgot Password?</a>
                 </div>
               </div>
             </div>

@@ -17,7 +17,14 @@ layout: login
                   <img src="/images/logo/color_logo.png" alt="Brand Logo" class="imgs-fluid" style="max-width: 180px"><br/>
                   <p class="text-black-50 mb-3"><small>Too big to think</small></p>
 
-                  <h4 class="text-secondary mb-4"><i class="material-icons md-36 text-warning animated bounceIn">vpn_key</i> Two Step verification</h4>
+                  <h5 class="text-secondary mb-4"><i class="material-icons md-36 text-warning animated bounceIn">vpn_key</i> Two Step Verification</h5>
+                </div>
+
+                <div class="alert alert-danger notice alert-dismissible fade show" role="alert">
+                  Invalid OTP.
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="material-icons">close</i></span>
+                  </button>
                 </div>
 
                 <form class="user">
@@ -28,19 +35,16 @@ layout: login
                       </div>
                       <input type="text" name="otptoken" id="otptoken" class="form-control text-monospace pincode" maxlength="6" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" aria-label="OTP input" aria-describedby="otptoken" tabindex="1" autofocus>
                     </div>
-                    <p id="OTPHelper" class="small text-black-50 mb-0">Please type in the code displayed on your authenticator app from your device.</p>
+                    <p id="OTPHelper" class="small text-black-50 mb-0 mt-2">Please type in the code displayed on your authenticator app from your device.</p>
                   </div>
                   <a href="/admin/clients/index.html" class="btn btn-warning btn-block">
                     Verify
                   </a>
-                  <p class="text-center text-secondary">
-                    <small>This is just a demo page, click VERIFY to continue.</small>
-                  </p>
                 </form>
 
                 <hr>
                 <div class="text-center">
-                  <a class="small" href="reset2fa.html">I lost my phone or my phone was reset...</a>
+                  <a class="small" href="lost_phone.html"><i class="material-icons text-black-50 mr-1">device_unknown</i>I lost my phone or my phone was reset...</a>
                 </div>
               </div>
             </div>
