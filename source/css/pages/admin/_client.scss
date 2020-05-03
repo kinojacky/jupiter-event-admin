@@ -1,0 +1,52 @@
+.select-client {
+  margin-bottom: 1.5rem;
+  .settings-icons {
+    text-align: right;
+
+    a {
+      position: relative;
+      z-index: 9;
+    }
+  }
+
+  .selection-block {
+    transform: rotate(0);
+
+    .selected-client {
+      position: absolute;
+      top: 75px;
+      color: #fff;
+      background-color: #28a745;
+      border-radius: 0;
+    }
+  }
+
+  .client-logo {
+    text-align: center;
+    margin-top: -24px;
+
+    img {
+      height: 100px;
+    }
+  }
+}
+
+.recent-events {
+  margin-bottom: 1.5rem;
+  .code-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    outline: 0px;
+    height: 38px;
+    width: 38px;
+  }
+}
+
+.select-client,
+.recent-events {
+  a {
+    text-decoration: none;
+  }
+}
