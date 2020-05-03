@@ -2,14 +2,346 @@
 title: Welcome to Middleman
 layout: admin
 ---
+
+<link href="/css/vendors/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 <section>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <h1>Event List Dashboard</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <div class="container">
+    <!-- Event List DataTales -->
+    <div class="row mb-3">
+      <div class="col-12 col-xl-6">
+        <h4>Event List <i class="material-icons">keyboard_arrow_right</i> <span class="text-black-50">Client Name (CODE)</span></h4>
+      </div>
+      <div class="col-12 col-xl-6 text-right">
+        <a href="../e1_admin/events/regevent_description.html" class="btn btn-primary shadow-sm mr-lg-1 mb-1">
+          <i class="fas fa-plus fa-fw text-white-50"></i> Add Event
+        </a>
       </div>
     </div>
+
+    <div class="table-responsive mb-5">
+      <table class="table table-striped-5n table-hover mb-0" id="EventDataTable">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width:60px;">Code</th>
+            <th>Event Name</th>
+            <th>InCharge</th>
+            <th>Date</th>
+            <th style="text-align:center;width:100px;">Days Left</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-monospace">AAA</td>
+            <td>
+              <div class="text-truncate">
+                <i class="fas fa-fw fa-lg text-success mr-1 fa-check-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a>
+              </div>
+            </td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">25/04/2011</td>
+            <td class="text-center">365</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">ANB</td>
+            <td>
+              <div class="text-truncate">
+                <i class="fas fa-fw fa-lg text-success mr-1 fa-check-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a>
+              </div>
+            </td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">25/07/2011</td>
+            <td class="text-center">321</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">ABC</td>
+            <td>
+              <div class="text-truncate">
+                <i class="fas fa-fw fa-lg text-success mr-1 fa-check-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name with long name</a>
+              </div>
+            </td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">12/01/2009</td>
+            <td class="text-center">277</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">APD</td>
+            <td>
+              <div class="text-truncate">
+                <i class="fas fa-fw fa-lg text-success mr-1 fa-check-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name with long name Random Event Name with long name</a>
+              </div>
+            </td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">29/03/2012</td>
+            <td class="text-center">233</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">BDE</td>
+            <td><i class="fas fa-fw fa-lg text-warning mr-1 fa-pause-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">28/11/2008</td>
+            <td class="text-center">189</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">BRF</td>
+            <td><i class="fas fa-fw fa-lg text-warning mr-1 fa-pause-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">02/12/2012</td>
+            <td class="text-center">145</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">CFG</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">06/08/2012</td>
+            <td class="text-center">101</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">CTH</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">14/10/2010</td>
+            <td class="text-center">57</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">DHI</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">15/09/2009</td>
+            <td class="text-center">13</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">DVJ</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">13/12/2008</td>
+            <td class="text-center">-31</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">EJK</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">19/12/2008</td>
+            <td class="text-center">-75</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">EXL</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">03/03/2013</td>
+            <td class="text-center">-119</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">FLM</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">16/10/2008</td>
+            <td class="text-center">-163</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">FZN</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">18/12/2012</td>
+            <td class="text-center">-207</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">GNO</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">17/03/2010</td>
+            <td class="text-center">-251</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">HBP</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">27/11/2012</td>
+            <td class="text-center">-295</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">HPQ</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">09/06/2010</td>
+            <td class="text-center">-339</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">IDR</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">10/04/2009</td>
+            <td class="text-center">-383</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">IRS</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">13/10/2012</td>
+            <td class="text-center">-427</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">JFT</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">26/09/2012</td>
+            <td class="text-center">-471</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">JTU</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">03/09/2011</td>
+            <td class="text-center">-515</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">KHV</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">25/06/2009</td>
+            <td class="text-center">-559</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">KVW</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">12/12/2011</td>
+            <td class="text-center">-603</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">LJX</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">20/09/2010</td>
+            <td class="text-center">-647</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">LXY</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">09/10/2009</td>
+            <td class="text-center">-691</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">MLZ</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">22/12/2010</td>
+            <td class="text-center">-735</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">NAA</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">14/11/2010</td>
+            <td class="text-center">-779</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">NOB</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">07/06/2011</td>
+            <td class="text-center">-823</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">OCC</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">11/03/2010</td>
+            <td class="text-center">-867</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">OQD</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">14/08/2011</td>
+            <td class="text-center">-911</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">PEE</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">02/06/2011</td>
+            <td class="text-center">-955</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">PSF</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">22/10/2009</td>
+            <td class="text-center">-999</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">QGG</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">07/05/2011</td>
+            <td class="text-center">-1043</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">QUH</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">26/10/2008</td>
+            <td class="text-center">-1087</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">RII</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">09/03/2011</td>
+            <td class="text-center">-1131</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">RWJ</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">09/12/2009</td>
+            <td class="text-center">-1175</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">SKK</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">16/12/2008</td>
+            <td class="text-center">-1219</td>
+          </tr>
+          <tr>
+            <td class="text-monospace">SYL</td>
+            <td><i class="fas fa-fw fa-lg text-danger mr-1 fa-times-circle"></i><a href="/events/clientcode/2020/eventcode/admin/dashboard.html">Random Event Name</a></td>
+            <td>Person Name</td>
+            <td class="text-black-50 small">12/02/2010</td>
+            <td class="text-center">-1263</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </section>
+
+<script src="/js/vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="/js/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    // Call the dataTables jQuery plugin
+    $('#EventDataTable').DataTable({
+      fixedHeader: {
+          footer: false
+      },
+      order: [ 4, 'desc' ],
+      columnDefs: [ {
+        orderable: false,
+        className: 'select-checkbox',
+        targets:   0
+      } ],
+      select: {
+        style:    'multi',
+        selector: 'td:first-child'
+      },
+      language: {
+        search: "Search:"
+      }
+    });
+  });
+</script>
