@@ -93,9 +93,22 @@
   }
 
   .nav-item {
-    .collapsing {
+    // Collapsing Animation
+    .collapse:not(.show) {
       display: none;
-      transition: none;
+    }
+
+    .collapsing {
+      position: relative;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.15s ease;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .collapsing {
+        transition: none;
+      }
     }
 
     .collapse,
