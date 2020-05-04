@@ -1,9 +1,0 @@
-//= require ./vendor/jquery/jquery.min
-//= require ./vendor/popper/popper
-//= require ./vendor/bootstrap/bootstrap.min
-//= require ./vendor/counterup/counterup.min
-//= require ./vendor/easing/easing
-//= require ./vendor/lightbox/lightbox
-//= require ./vendor/owlcarousel/owl.carousel
-//= require ./vendor/waypoints/waypoints.min
-//= require ./vendor/wow/wow

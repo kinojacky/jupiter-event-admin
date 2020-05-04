@@ -29,7 +29,12 @@ $zh-default-font:
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 // Fix align with text
-.material-icons { vertical-align: middle; margin-bottom: 3px; }
+.material-icons {
+  vertical-align: middle;
+  // margin-bottom: 3px;
+  // position: relative;
+  // top: -2px;
+}
 
 // Material web icon fonts setting
 // Rules for sizing the icon.

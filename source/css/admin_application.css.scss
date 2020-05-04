@@ -1,0 +1,25 @@
+// Vendor components
+@import "admin/vendors/animate/animate.css";
+@import "admin/vendors/bootstrap/bootstrap.css";
+@import "admin/vendors/datatables/dataTables.bootstrap4.css";
+@import "admin/vendors/fullcalendar/core/main.css";
+@import "admin/vendors/fullcalendar/daygrid/main.css";
+
+// default pages setting
+@import "admin/settings/includes";
+@import "admin/layouts/base";
+
+// pages setting
+@import "admin/pages/admin/includes";
+// @import "admin/pages/home/base";
+
+// common pages setting
+@import "admin/pages/common/sidebar_nav";
+@import "admin/pages/common/topbar_nav";
+@import "admin/pages/common/footer";
+
+// objects setting
+@import "admin/objects/includes";
+
+// components hack setting
+@import "admin/components/includes";

@@ -1,15 +1,14 @@
 ---
-title: Welcome to Middleman
+title: Event List | Jupiter
 layout: admin
 ---
 
-<link href="/css/vendors/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 <section>
   <div class="container">
     <!-- Event List DataTales -->
     <div class="row mb-3">
       <div class="col-12 col-xl-6">
-        <h4>Event List <i class="material-icons">keyboard_arrow_right</i> <span class="text-black-50">Client Name (CODE)</span></h4>
+        <h4>Client Name (CODE) <i class="material-icons">keyboard_arrow_right</i> <span class="text-black-50">Event List</span></h4>
       </div>
       <div class="col-12 col-xl-6 text-right">
         <a href="../e1_admin/events/regevent_description.html" class="btn btn-primary shadow-sm mr-lg-1 mb-1">
@@ -319,29 +318,4 @@ layout: admin
   </div>
 </section>
 
-<script src="/js/vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="/js/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<script>
-  $(document).ready(function() {
-    // Call the dataTables jQuery plugin
-    $('#EventDataTable').DataTable({
-      fixedHeader: {
-          footer: false
-      },
-      order: [ 4, 'desc' ],
-      columnDefs: [ {
-        orderable: false,
-        className: 'select-checkbox',
-        targets:   0
-      } ],
-      select: {
-        style:    'multi',
-        selector: 'td:first-child'
-      },
-      language: {
-        search: "Search:"
-      }
-    });
-  });
-</script>
+<%= javascript_include_tag "/js/admin/page/event" %>

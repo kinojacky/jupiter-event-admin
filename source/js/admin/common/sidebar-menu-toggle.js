@@ -18,19 +18,4 @@
   // Sidebar menu Dropdown Script
   $('#sidebar-secondary .collapse').collapse('hide');
 
-  // Tooltips
-  $('[data-toggle="tooltip"]').tooltip()
-
-  // OTP auto-submit
-  $('#otptoken').on('keyup',function(){
-    var val = $(this).val();
-    var len = val.length;
-
-    if(len == 6){
-      console.log("Submit!")
-      // document.forms[0].submit();
-      window.location.href = "/admin/clients/index.html";
-    }
-  });
-
 })(jQuery); // End of use strict
