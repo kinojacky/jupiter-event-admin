@@ -30,10 +30,11 @@ $zh-default-font:
 
 // Fix align with text
 .material-icons {
+  display: table-cell;
   vertical-align: middle;
-  // margin-bottom: 3px;
-  // position: relative;
-  // top: -2px;
+  width: 24px;
+  height: 24px;
+  padding-right: 0.5rem;
 }
 
 // Material web icon fonts setting

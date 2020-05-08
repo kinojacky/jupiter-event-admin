@@ -8,24 +8,17 @@
           <img src="/images/logo/brand_logo_sm.png" alt="Brand Logo" class="img-fluid" data-toggle="tooltip" data-placement="right" title="Jupiter Home">
         </div>
       </a>
-      <ul class="list-group">
-        <!-- <li class="nav-item">
-          <a href="/admin/events/new.html" class="nav-link">
-            <i class="material-icons" data-toggle="tooltip" data-placement="right" title="Add Event">add</i>
-          </a>
-        </li> -->
-      </ul>
     </div>
 
     <div class="icon-group-bottom">
       <ul class="list-group">
         <li class="nav-item">
-          <a href="/admin/help/index.html" class="nav-link">
+          <a href="/admin/help/index.html" class="nav-link <%= nav_active('/admin/help') %>">
             <i class="material-icons" data-toggle="tooltip" data-placement="right" title="Help">help_outline</i>
           </a>
         </li>
         <li class="nav-item">
-          <a href="/admin/settings/index.html" class="nav-link">
+          <a href="/admin/settings/index.html" class="nav-link <%= nav_active('/admin/settings') %>">
             <i class="material-icons" data-toggle="tooltip" data-placement="right" title="System Settings">settings</i>
           </a>
         </li>
@@ -40,14 +33,14 @@
 
     <ul class="list-group">
       <li class="nav-item">
-        <a href="/admin/clients/index.html" class="nav-link">
+        <a href="/admin/clients/index.html" class="nav-link <%= nav_active('/admin/clients') %>">
           <i class="material-icons">folder_shared</i>
           <span>Your Client</span>
         </a>
       </li>
 
       <li class="nav-item">
-        <a href="/admin/events/index.html" class="nav-link">
+        <a href="/admin/events/index.html" class="nav-link <%= nav_active('/admin/events/') %>">
           <i class="material-icons">list_alt</i>
           <span>Events</span>
         </a>
@@ -61,7 +54,7 @@
       </li>
 
       <li class="nav-item">
-        <a href="/admin/calendar/index.html" class="nav-link">
+        <a href="/admin/calendar/index.html" class="nav-link <%= nav_active('/admin/calendar') %>">
           <i class="material-icons">event</i>
           <span>Calendar</span>
         </a>

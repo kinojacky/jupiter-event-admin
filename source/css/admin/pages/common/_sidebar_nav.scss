@@ -24,6 +24,7 @@
       img {
         width: 50px;
 
+        &.active,
         &:active,
         &:focus,
         &:hover {
@@ -54,6 +55,7 @@
         color: rgba(255, 255, 255, .3);
       }
 
+      &.active,
       &:active,
       &:focus,
       &:hover {
@@ -149,7 +151,8 @@
 
     .nav-link {
       position: relative;
-      display: block;
+      display: table;
+      width: 100%;
       padding: 0.75rem 1.25rem  0.75rem  0.75rem;
 
       i {
@@ -158,22 +161,26 @@
 
       span {
         font-size: .85rem;
-        display: inline;
+        display: table-cell;
+        vertical-align: middle;
       }
 
-      &[data-toggle=collapse]::after {
-        width: 1rem;
-        text-align: center;
-        float: right;
-        vertical-align: 0;
+      .collapse-arrow {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+      }
+
+      &[data-toggle=collapse] .collapse-arrow::after {
         border: 0;
         font-weight: 900;
-        content: '\f107';
-        font-family: 'Font Awesome 5 Free'
+        content: 'expand_more';
+        font-family: 'Material Icons';
       }
 
-      &[data-toggle=collapse].collapsed::after {
-        content: '\f105'
+      &[data-toggle=collapse].collapsed .collapse-arrow::after {
+        // content: '\f105';
+        content: 'chevron_right';
       }
     }
   }
@@ -201,6 +208,7 @@
         color: rgba(66, 82, 110, .3);
       }
 
+      &.active,
       &:active,
       &:focus,
       &:hover {
@@ -227,12 +235,13 @@
 
   .nav-item {
     .nav-link {
-      color: #ffffff;
+      color: #ffffff87;
 
       i {
         color: rgba(255, 255, 255, .3);
       }
 
+      &.active,
       &:active,
       &:focus,
       &:hover {

@@ -1,6 +1,13 @@
 .topbar {
 	height: 4.375rem;
 
+	.modal span,
+	.navbar-search span,
+	.navbar-nav span {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
 	.nav-item.dropdown {
 		.dropdown-toggle {
 			&::after {
@@ -153,7 +160,7 @@
 				&:hover {
 					color: #b7b9cc;
 				}
-				
+
 				&:active {
 					color: #858796;
 				}

@@ -2,7 +2,7 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 # activate :directory_indexes
 activate :sprockets
-
+# activate :directory_indexes
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -39,6 +39,12 @@ page '/*.txt', layout: false
 #   end
 # end
 
+helpers do
+  def nav_active(page)
+    current_page.url.include?(page) ? "active" : ''
+  end
+end
+
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
@@ -57,3 +63,6 @@ configure :build do
 #   activate :minify_css
 #   activate :minify_javascript
 end
+
+# Global site settings (not shown here)
+set :site_url, ""

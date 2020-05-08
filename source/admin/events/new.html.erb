@@ -2,14 +2,408 @@
 title: Add Event | Jupiter
 layout: admin
 ---
+
+<link href="/css/admin/vendors/nav-wizard/nav-wizard.css" rel="stylesheet">
+<!-- Bootstrap Datetimepicker -->
+<script src="/js/admin/vendors/moment/moment.js"></script>
+<link href="/css/admin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
+<script src="/js/admin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+
 <section>
-  <div class="container-fluid">
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col-12 col-xl-6">
+        <h4>
+          <i class="material-icons">folder_shared</i><span>Client Name (CODE)</span>
+          <i class="material-icons pl-2">keyboard_arrow_right</i>
+          <span class="text-black-50">Add Event</span>
+        </h4>
+      </div>
+      <div class="col-12 col-xl-6 text-right">
+        <!-- <a href="step2.html" class="btn btn-success shadow-sm mr-lg-1 mb-1">
+          Next <i class="fas fa-chevron-right fa-fw text-white-50"></i>
+        </a> -->
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row mb-3">
+      <div class="col-12">
+        <div id="myTab" class="nav nav-wizard" role="tablist">
+          <a class="active" href="#step1" id="step1-tab" data-toggle="tab" role="tab" aria-controls="step1" aria-selected="true">
+            <div>Step 1 - Details</div>
+          </a>
+          <a class="" href="#step2" id="step2-tab" data-toggle="tab" role="tab" aria-controls="step2" aria-selected="false">
+            <div>Step 2 - Emails</div>
+          </a>
+          <a class="" href="#step3" id="step3-tab" data-toggle="tab" role="tab" aria-controls="step3" aria-selected="false">
+            <div>Step 3 - Reports</div>
+          </a>
+          <a class="" href="#step4" id="step4-tab" data-toggle="tab" role="tab" aria-controls="step4" aria-selected="false">
+            <div>Step 4 - Completed</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Event Info -->
     <div class="row">
       <div class="col-12">
-        <h1>Create New Event Dashboard</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <form class="reg-event mb-5" action="#" method="post">
+          <div id="myTabContent" class="tab-content">
+            <div id="step1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="step1-tab">
+              <div class="row">
+                <!-- First Column -->
+                <div class="col-xl-6 border-xl-right-none border-right">
+                  <h5 class="form-title">
+                    <i class="material-icons">event_note</i>
+                    <span>Event Info</span>
+                  </h5>
+
+                  <div class="form-group row required">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Event Name:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Client Name:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName" aria-describedby="FieldNameHelp"/>
+                      <small id="FieldNameHelp" class="form-text text-muted">
+                        Client in Charge (Admin Use Only)
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="ClientCode" class="col-xl-4 col-form-label">Client Code:</label>
+                    <div class="col-xl-4">
+                      <input type="text" class="form-control" id="ClientCode" value="cw" aria-describedby="SMSFromName"/>
+                      <small id="SMSFromName" class="form-text text-muted">
+                        NOTE: Small capital letter
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="CodeName" class="col-xl-4 col-form-label">Event Code:</label>
+                    <div class="col-xl-4">
+                      <input type="text" class="form-control" id="CodeName" value="dem" aria-describedby="SMSFromName"/>
+                      <small id="SMSFromName" class="form-text text-muted">
+                        NOTE: Small capital letter
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="SubjectType" class="col-xl-4 col-form-label">Job Type:</label>
+                    <div class="col-xl-4">
+                      <select class="form-control" name="SubjectType" id="SubjectType">
+                        <option value="0" selected disabled>Choose...</option>
+                        <option value="1">Promotion</option>
+                        <option value="2">Event</option>
+                        <option value="3">Product Launch</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="SubjectType" class="col-xl-4 col-form-label">Event Status:</label>
+                    <div class="col-xl-4">
+                      <select class="form-control" id="Status">
+                        <option value="0" selected disabled>Choose...</option>
+                        <option value="1">Testing</option>
+                        <option value="2">Open</option>
+                        <option value="3">Closed</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <h5 class="form-title">
+                    <i class="material-icons">tune</i>
+                    <span>System Info</span>
+                  </h5>
+
+                  <div class="form-group row">
+                    <label for="AddToEventRsvpStatus" class="col-xl-4 col-form-label">Default RSVP Status:</label>
+                    <div class="col-xl-8">
+                      <select id="AddToEventRsvpStatus" class="form-control">
+                        <option value="0" disabled>Choose...</option>
+                        <option value="2">Approved</option>
+                        <option value="5">To Approve</option>
+                        <option value="7">To Follow Up</option>
+                        <option value="8">To Review</option>
+                        <option value="4">Declined</option>
+                        <option value="3">Rejected</option>
+                        <option value="6">Uncontactable</option>
+                        <option value="1">Not Responded</option>
+                        <option value="10" selected>Admin Pending</option>
+                        <option value="11">Admin Rejected</option>
+                        <option value="9">Test</option>
+                      </select>
+                      <small id="nameHelper" class="text-black-50">When adding customers to event.</small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">QRCode Format:</label>
+                    <div class="col-xl-8">
+                      <textarea class="form-control text-monospace" id="QrCodeFormat" rows="3">[CUSTID].[REGKEY]</textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                  <h5 class="form-title mt-2">
+                    <i class="material-icons">public</i>
+                    <span>Public Info</span>
+                  </h5>
+
+                  <div class="form-group row required">
+                    <label for="StartDate" class="col-xl-4 col-form-label">Start Date:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="StartDate"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="EndDate" class="col-xl-4 col-form-label">End Date:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="EndDate"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Time:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName" placeholder="H:MM am/pm - H:MM am/pm"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Venue:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Site Link:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Name:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Email:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Tel:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Fax:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Signature URL:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FieldName"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="step2" class="tab-pane fade" role="tabpanel" aria-labelledby="step2-tab">
+              <div class="row">
+                <!-- First Column -->
+                <div class="col-xl-6 border-xl-right-none border-right">
+                  <h5 class="form-title">
+                    <i class="material-icons">mail</i>
+                    <span>Email Info</span>
+                  </h5>
+
+                  <div class="form-group row required">
+                    <label for="FromEmail" class="col-xl-4 col-form-label">From Email:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FromEmail" value="support@ekkko.com" aria-describedby="LinkHelp"/>
+                      <small id="LinkHelp" class="form-text text-muted">
+                        This is the email we send from, whenever sending any email invites, acknowledgments etc...
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="FromName" class="col-xl-4 col-form-label">From Name:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="FromName" value="Events Management" aria-describedby="FromNameHelp"/>
+                      <small id="FromNameHelp" class="form-text text-muted">
+                        This is the Name that appears in the "From" field of the recipient's email client.
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="ReplyToEmail" class="col-xl-4 col-form-label">Reply-To Email:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="ReplyToEmail" value="support@ekkko.com"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="ReplyToName" class="col-xl-4 col-form-label">Reply-To Name:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control" id="ReplyToName" value="Events Management"/>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="IsAutoApproved" class="col-xl-4 col-form-label">Is Registrant Auto-Approved:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsAutoApproved" aria-describedby="IsAutoApprovedHelp"/>
+                        <label class="custom-control-label" for="IsAutoApproved">
+                          <small id="IsAutoApprovedHelp" class="form-text text-muted">
+                            <p>If on, the registrant will be automatically approved once registrant registers online. RSVP status will be set to "approved", and registrant will receive the acknowledgement.</p>
+                            <p>If NOT, RSVP status will be set to "To Approve" and registrant will receive the acknowledgement email but registrant will then have to be approved manually by the Administrator.</p>
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="IsRsvpOn" class="col-xl-4 col-form-label">Is RSVP On:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsRsvpOn" aria-describedby="IsRsvpOnHelp" checked/>
+                        <label class="custom-control-label" for="IsRsvpOn">
+                          <small id="IsRsvpOnHelp" class="form-text text-muted">
+                            If on, registrant can update his/her status from the RSVP Email invite, and also login from public page. Also Admin and clients can generate reports from Report eDM.
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="IsNotifyOn" class="col-xl-4 col-form-label">Is Email Notification On:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsNotifyOn" aria-describedby="IsNotifyOnHelp"/>
+                        <label class="custom-control-label" for="IsNotifyOn">
+                          <small id="IsNotifyOnHelp" class="form-text text-muted">
+                            If on, you will be notified by email each time there is a registration or registrant update.
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="NotifyEmail" class="col-xl-4 col-form-label">Notification Emails:</label>
+                    <div class="col-xl-8">
+                      <textarea class="form-control" id="NotifyEmail" rows="3">support@ekkko.com</textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                </div>
+              </div>
+            </div>
+
+            <div id="step3" class="tab-pane fade" role="tabpanel" aria-labelledby="step3-tab">
+              <div class="row">
+                <!-- First Column -->
+                <div class="col-xl-6 border-xl-right-none border-right">
+                  <h3>Step 3</h3>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                </div>
+              </div>
+            </div>
+
+            <div id="step4" class="tab-pane fade" role="tabpanel" aria-labelledby="step4-tab">
+              <div class="row">
+                <!-- First Column -->
+                <div class="col-xl-6 border-xl-right-none border-right">
+                  <h3>Step 4</h3>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </section>
+
+<script type="text/javascript">
+  $(function() {
+    $('#StartDate').datetimepicker({
+      icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar',
+        up: 'fas fa-chevron-up',
+        down: 'fas fa-chevron-down',
+        previous: 'fas fa-chevron-left',
+        next: 'fas fa-chevron-right',
+        today: 'fas fa-calendar-check',
+        clear: 'far fa-trash-alt',
+        close: 'far fa-times-circle'
+      },
+      format: 'DD MMM YYYY (ddd)',
+      locale: 'sg',
+      showTodayButton: true
+    });
+
+    $('#EndDate').datetimepicker({
+      icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar',
+        up: 'fas fa-chevron-up',
+        down: 'fas fa-chevron-down',
+        previous: 'fas fa-chevron-left',
+        next: 'fas fa-chevron-right',
+        today: 'fas fa-calendar-check',
+        clear: 'far fa-trash-alt',
+        close: 'far fa-times-circle'
+      },
+      format: 'DD MMM YYYY (ddd)',
+      locale: 'sg',
+      showTodayButton: true
+    });
+  })
+</script>
