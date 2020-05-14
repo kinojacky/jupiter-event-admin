@@ -5,3 +5,5 @@
 //= require ./admin/vendors/datatables/dataTables.bootstrap4.min
 //= require ./admin/vendors/fullcalendar/core/main
 //= require ./admin/vendors/fullcalendar/daygrid/main
+//= require ./admin/vendors/moment/moment
+//= require ./admin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min

@@ -1,12 +1,14 @@
-.reg-event {
-  .form-title {
-    // border-bottom: 1px solid #ddd;
-    padding-bottom: 0.4rem;
-    margin-bottom: 1rem;
+#Admin {
+  span {
+    display: table-cell;
+    vertical-align: middle;
+  }
 
-    span {
-      display: table-cell;
-      vertical-align: middle;
+  .reg-event {
+    .form-title {
+      // border-bottom: 1px solid #ddd;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
   }
 }

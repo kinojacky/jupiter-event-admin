@@ -1,68 +1,60 @@
-/* Wizard Tab Container */
-.nav-wizard {
-  position: relative;
-  overflow: hidden;
+.nav-tabs li {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto 20px;
 }
 
-.nav-wizard a {
-  position: relative;
-  color: #468847;
-  border: 1px solid #d4d4d4;
-  padding: 0 20px 0 30px;
-  line-height: 50px;
+.nav-tabs li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  color: #333333;
+  text-decoration: none;
+  background-color: #f8f9fc;
+  border-radius: 100%;
+  border: 2px solid #e0e0e0;
 }
 
-.nav-wizard a:hover {
-  background-color: transparent;
+.nav-tabs li a:focus,
+.nav-tabs li a:hover {
+  border: 2px solid #505050;
 }
 
-/* Next Tab Arrow Border */
-.nav-wizard a:before {
+.nav-tabs li a.active {
+  border: 2px solid #0069d9;
+}
+
+.nav-tabs li a.active::after {
+  content: " ";
   position: absolute;
-  display: block;
-  border: 26px solid transparent;
-  border-left: 16px solid #d4d4d4;
-  border-right: 0;
-  top: -1px;
-  z-index: 10;
-  content: '';
-  right: -16px;
+  opacity: 1;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 10px solid transparent;
+  border-bottom-color: #0069d9;
 }
 
-.nav-wizard a:after {
+.nav-tabs .round-tab {
+  margin-right: -0.5px;
+}
+
+.nav-tabs .round-tab i {
+  padding-right: 0px;
+  font-size: 40px;
+}
+
+.connecting-line {
+  height: 2px;
+  background: #e0e0e0;
   position: absolute;
-  display: block;
-  border: 26px solid transparent;
-  border-left: 16px solid #f9f9f9;
-  border-right: 0;
-  top: -1px;
-  z-index: 10;
-  content: '';
-  right: -15px;
-}
-
-/* Active Tab */
-.nav-wizard a.active:after {
-  border-left: 16px solid #d9edf7;
-}
-
-.nav-wizard a.active,
-.nav-wizard a.active:active,
-.nav-wizard a.active:visited,
-.nav-wizard a.active:focus {
-  color: #3a87ad;
-  background: #d9edf7;
-}
-
-/* Unactive Tabs */
-.nav-wizard .active ~ a:after {
-  border-left: 16px solid #ededed;
-}
-
-.nav-wizard .active ~ a,
-.nav-wizard .active ~ a:active,
-.nav-wizard .active ~ a:visited,
-.nav-wizard .active ~ a:focus {
-  color: #999999;
-  background: #ededed;
+  width: 70%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%;
+  z-index: -1;
 }

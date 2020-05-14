@@ -3,47 +3,45 @@ title: Add Event | Jupiter
 layout: admin
 ---
 
-<link href="/css/admin/vendors/nav-wizard/nav-wizard.css" rel="stylesheet">
-<!-- Bootstrap Datetimepicker -->
-<script src="/js/admin/vendors/moment/moment.js"></script>
-<link href="/css/admin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet">
-<script src="/js/admin/vendors/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
-
-<section>
+<section id="Admin">
   <div class="container">
     <div class="row mb-3">
       <div class="col-12 col-xl-6">
         <h4>
           <i class="material-icons">folder_shared</i><span>Client Name (CODE)</span>
           <i class="material-icons pl-2">keyboard_arrow_right</i>
-          <span class="text-black-50">Add Event</span>
+          <span class="small text-black-50">Add Event</span>
         </h4>
       </div>
       <div class="col-12 col-xl-6 text-right">
-        <!-- <a href="step2.html" class="btn btn-success shadow-sm mr-lg-1 mb-1">
-          Next <i class="fas fa-chevron-right fa-fw text-white-50"></i>
-        </a> -->
       </div>
     </div>
 
-    <hr>
-
     <div class="row mb-3">
       <div class="col-12">
-        <div id="myTab" class="nav nav-wizard" role="tablist">
-          <a class="active" href="#step1" id="step1-tab" data-toggle="tab" role="tab" aria-controls="step1" aria-selected="true">
-            <div>Step 1 - Details</div>
-          </a>
-          <a class="" href="#step2" id="step2-tab" data-toggle="tab" role="tab" aria-controls="step2" aria-selected="false">
-            <div>Step 2 - Emails</div>
-          </a>
-          <a class="" href="#step3" id="step3-tab" data-toggle="tab" role="tab" aria-controls="step3" aria-selected="false">
-            <div>Step 3 - Reports</div>
-          </a>
-          <a class="" href="#step4" id="step4-tab" data-toggle="tab" role="tab" aria-controls="step4" aria-selected="false">
-            <div>Step 4 - Completed</div>
-          </a>
-        </div>
+        <div class="connecting-line"></div>
+        <ul id="createEventTabs" class="nav nav-tabs" role="tablist">
+          <li class="tab">
+            <a class="tab-link active" href="#step1" id="step1-tab" data-toggle="tab" role="tab" aria-controls="step1" aria-selected="true">
+              <div class="round-tab"><i class="material-icons">event_note</i></div>
+            </a>
+          </li>
+          <li class="tab">
+            <a class="tab-link" href="#step2" id="step2-tab" data-toggle="tab" role="tab" aria-controls="step2" aria-selected="false">
+              <div class="round-tab"><i class="material-icons">mail</i></div>
+            </a>
+          </li>
+          <li class="tab">
+            <a class="tab-link" href="#step3" id="step3-tab" data-toggle="tab" role="tab" aria-controls="step3" aria-selected="false">
+              <div class="round-tab"><i class="material-icons">flag</i></div>
+            </a>
+          </li>
+          <li class="tab">
+            <a class="tab-link" href="#step4" id="step4-tab" data-toggle="tab" role="tab" aria-controls="step4" aria-selected="false">
+              <div class="round-tab"><i class="material-icons">done</i></div>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 
@@ -51,29 +49,39 @@ layout: admin
     <div class="row">
       <div class="col-12">
         <form class="reg-event mb-5" action="#" method="post">
-          <div id="myTabContent" class="tab-content">
-            <div id="step1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="step1-tab">
+          <div id="createEventTabsContent" class="tab-content">
+            <div id="step1" class="tab-pane show active" role="tabpanel" aria-labelledby="step1-tab">
+              <div class="row mb-3">
+                <div class="col-6 text-left">
+                </div>
+                <div class="col-6 text-right">
+                  <a href="#" class="next-tab btn btn-primary">
+                    <span>Continue</span><i class="material-icons text-white-50 pr-0 pl-2">keyboard_arrow_right</i>
+                  </a>
+                </div>
+              </div>
+
               <div class="row">
                 <!-- First Column -->
                 <div class="col-xl-6 border-xl-right-none border-right">
                   <h5 class="form-title">
-                    <i class="material-icons">event_note</i>
+                    <i class="material-icons text-black-50">double_arrow</i>
                     <span>Event Info</span>
                   </h5>
 
                   <div class="form-group row required">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Event Name:</label>
+                    <label for="EventName" class="col-xl-4 col-form-label">Event Name:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="EventName" autofocus/>
                     </div>
                   </div>
 
                   <div class="form-group row required">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Client Name:</label>
+                    <label for="ClientName" class="col-xl-4 col-form-label">Person in Charge:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName" aria-describedby="FieldNameHelp"/>
+                      <input type="text" class="form-control" id="ClientName" aria-describedby="FieldNameHelp"/>
                       <small id="FieldNameHelp" class="form-text text-muted">
-                        Client in Charge (Admin Use Only)
+                        Admin Use Only
                       </small>
                     </div>
                   </div>
@@ -81,9 +89,9 @@ layout: admin
                   <div class="form-group row required">
                     <label for="ClientCode" class="col-xl-4 col-form-label">Client Code:</label>
                     <div class="col-xl-4">
-                      <input type="text" class="form-control" id="ClientCode" value="cw" aria-describedby="SMSFromName"/>
+                      <input type="text" class="form-control" id="ClientCode" value="ab" aria-describedby="SMSFromName"/>
                       <small id="SMSFromName" class="form-text text-muted">
-                        NOTE: Small capital letter
+                        Small capital letter
                       </small>
                     </div>
                   </div>
@@ -91,9 +99,9 @@ layout: admin
                   <div class="form-group row required">
                     <label for="CodeName" class="col-xl-4 col-form-label">Event Code:</label>
                     <div class="col-xl-4">
-                      <input type="text" class="form-control" id="CodeName" value="dem" aria-describedby="SMSFromName"/>
+                      <input type="text" class="form-control" id="CodeName" value="cde" aria-describedby="SMSFromName"/>
                       <small id="SMSFromName" class="form-text text-muted">
-                        NOTE: Small capital letter
+                        Small capital letter
                       </small>
                     </div>
                   </div>
@@ -111,9 +119,9 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="SubjectType" class="col-xl-4 col-form-label">Event Status:</label>
+                    <label for="EventStatus" class="col-xl-4 col-form-label">Event Status:</label>
                     <div class="col-xl-4">
-                      <select class="form-control" id="Status">
+                      <select class="form-control" id="EventStatus">
                         <option value="0" selected disabled>Choose...</option>
                         <option value="1">Testing</option>
                         <option value="2">Open</option>
@@ -122,15 +130,8 @@ layout: admin
                     </div>
                   </div>
 
-                  <hr>
-
-                  <h5 class="form-title">
-                    <i class="material-icons">tune</i>
-                    <span>System Info</span>
-                  </h5>
-
                   <div class="form-group row">
-                    <label for="AddToEventRsvpStatus" class="col-xl-4 col-form-label">Default RSVP Status:</label>
+                    <label for="AddToEventRsvpStatus" class="col-xl-4 col-form-label">Default Group:</label>
                     <div class="col-xl-8">
                       <select id="AddToEventRsvpStatus" class="form-control">
                         <option value="0" disabled>Choose...</option>
@@ -151,17 +152,17 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">QRCode Format:</label>
+                    <label for="qrcodeFormat" class="col-xl-4 col-form-label">QRCode Format:</label>
                     <div class="col-xl-8">
-                      <textarea class="form-control text-monospace" id="QrCodeFormat" rows="3">[CUSTID].[REGKEY]</textarea>
+                      <input type="text" class="form-control text-monospace" id="qrcodeFormat" value="[CUSTID].[REGID]"/>
                     </div>
                   </div>
                 </div>
 
                 <!-- Second Column -->
                 <div class="col-xl-6">
-                  <h5 class="form-title mt-2">
-                    <i class="material-icons">public</i>
+                  <h5 class="form-title mt-3 mt-xl-0">
+                    <i class="material-icons text-black-50">double_arrow</i>
                     <span>Public Info</span>
                   </h5>
 
@@ -180,77 +181,90 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Time:</label>
+                    <label for="Time" class="col-xl-4 col-form-label">Time:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName" placeholder="H:MM am/pm - H:MM am/pm"/>
+                      <input type="text" class="form-control" id="Time" placeholder="H:MM am/pm - H:MM am/pm"/>
                     </div>
                   </div>
 
                   <div class="form-group row required">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Venue:</label>
+                    <label for="Venue" class="col-xl-4 col-form-label">Venue:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="Venue"/>
                     </div>
                   </div>
 
                   <div class="form-group row required">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Site Link:</label>
+                    <label for="SiteLink" class="col-xl-4 col-form-label">Site Link:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="SiteLink"/>
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Name:</label>
+                    <label for="ContactName" class="col-xl-4 col-form-label">Contact Name:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="ContactName"/>
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Email:</label>
+                    <label for="ContactEmail" class="col-xl-4 col-form-label">Contact Email:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="ContactEmail"/>
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Tel:</label>
+                    <label for="ContactTel" class="col-xl-4 col-form-label">Contact Tel:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="ContactTel"/>
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Fax:</label>
+                    <label for="ContactFax" class="col-xl-4 col-form-label">Contact Fax:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="ContactFax"/>
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <label for="FieldName" class="col-xl-4 col-form-label">Contact Signature URL:</label>
+                    <label for="ContactSignURL" class="col-xl-4 col-form-label">Contact Signature URL:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FieldName"/>
+                      <input type="text" class="form-control" id="ContactSignURL"/>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div id="step2" class="tab-pane fade" role="tabpanel" aria-labelledby="step2-tab">
+            <div id="step2" class="tab-pane" role="tabpanel" aria-labelledby="step2-tab">
+              <div class="row mb-3">
+                <div class="col-6 text-left">
+                  <a href="#" class="previous-tab btn btn-danger">
+                    <i class="material-icons text-white-50">keyboard_arrow_left</i><span>Back</span>
+                  </a>
+                </div>
+                <div class="col-6 text-right">
+                  <a href="#" class="next-tab btn btn-primary">
+                    <span>Continue</span><i class="material-icons text-white-50 pr-0 pl-2">keyboard_arrow_right</i>
+                  </a>
+                </div>
+              </div>
+
               <div class="row">
                 <!-- First Column -->
                 <div class="col-xl-6 border-xl-right-none border-right">
                   <h5 class="form-title">
-                    <i class="material-icons">mail</i>
-                    <span>Email Info</span>
+                    <i class="material-icons text-black-50">double_arrow</i>
+                    <span>Email Settings</span>
                   </h5>
 
                   <div class="form-group row required">
                     <label for="FromEmail" class="col-xl-4 col-form-label">From Email:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="FromEmail" value="support@ekkko.com" aria-describedby="LinkHelp"/>
+                      <input type="text" class="form-control" id="FromEmail" value="donotreply@emaildomain.com" aria-describedby="LinkHelp"/>
                       <small id="LinkHelp" class="form-text text-muted">
                         This is the email we send from, whenever sending any email invites, acknowledgments etc...
                       </small>
@@ -270,7 +284,7 @@ layout: admin
                   <div class="form-group row required">
                     <label for="ReplyToEmail" class="col-xl-4 col-form-label">Reply-To Email:</label>
                     <div class="col-xl-8">
-                      <input type="text" class="form-control" id="ReplyToEmail" value="support@ekkko.com"/>
+                      <input type="text" class="form-control" id="ReplyToEmail" value="donotreply@emaildomain.com"/>
                     </div>
                   </div>
 
@@ -282,7 +296,7 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="IsAutoApproved" class="col-xl-4 col-form-label">Is Registrant Auto-Approved:</label>
+                    <label for="IsAutoApproved" class="col-xl-4 col-form-label">Registrant Auto-Approved:</label>
                     <div class="col-xl-8">
                       <div class="form-control-plaintext custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="IsAutoApproved" aria-describedby="IsAutoApprovedHelp"/>
@@ -297,7 +311,7 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="IsRsvpOn" class="col-xl-4 col-form-label">Is RSVP On:</label>
+                    <label for="IsRsvpOn" class="col-xl-4 col-form-label">RSVP:</label>
                     <div class="col-xl-8">
                       <div class="form-control-plaintext custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="IsRsvpOn" aria-describedby="IsRsvpOnHelp" checked/>
@@ -309,9 +323,17 @@ layout: admin
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                  <h5 class="form-title">
+                    <i class="material-icons text-black-50">double_arrow</i>
+                    <span>Notification Settings</span>
+                  </h5>
 
                   <div class="form-group row">
-                    <label for="IsNotifyOn" class="col-xl-4 col-form-label">Is Email Notification On:</label>
+                    <label for="IsNotifyOn" class="col-xl-4 col-form-label">Email Notification:</label>
                     <div class="col-xl-8">
                       <div class="form-control-plaintext custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="IsNotifyOn" aria-describedby="IsNotifyOnHelp"/>
@@ -327,7 +349,161 @@ layout: admin
                   <div class="form-group row required">
                     <label for="NotifyEmail" class="col-xl-4 col-form-label">Notification Emails:</label>
                     <div class="col-xl-8">
-                      <textarea class="form-control" id="NotifyEmail" rows="3">support@ekkko.com</textarea>
+                      <textarea class="form-control" id="NotifyEmail" rows="3">notification@emaildomain.com</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="FieldName" class="col-xl-4 col-form-label">Subscribers Groups:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="Subscribe">
+                          <label class="custom-control-label" for="Subscribe">Subscribe</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="Unsubscribe">
+                          <label class="custom-control-label" for="Unsubscribe">Unsubscribe</label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="eDMGroup1">
+                          <label class="custom-control-label" for="eDMGroup1">
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName1" placeholder="eDM Group Name"/>
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="eDMGroup2">
+                          <label class="custom-control-label" for="eDMGroup2">
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName2" placeholder="eDM Group Name"/>
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="eDMGroup3">
+                          <label class="custom-control-label" for="eDMGroup3">
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName3" placeholder="eDM Group Name"/>
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="eDMGroup4">
+                          <label class="custom-control-label" for="eDMGroup4">
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName4" placeholder="eDM Group Name"/>
+                          </label>
+                        </div>
+                        <div class="custom-control custom-checkbox mt-1">
+                          <input type="checkbox" class="custom-control-input" id="eDMGroup5">
+                          <label class="custom-control-label" for="eDMGroup5">
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName5" placeholder="eDM Group Name"/>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="step3" class="tab-pane" role="tabpanel" aria-labelledby="step3-tab">
+              <div class="row mb-3">
+                <div class="col-6 text-left">
+                  <a href="#" class="previous-tab btn btn-danger">
+                    <i class="material-icons text-white-50">keyboard_arrow_left</i><span>Back</span>
+                  </a>
+                </div>
+                <div class="col-6 text-right">
+                  <a href="#" class="next-tab btn btn-success">
+                    <span>Save and Create</span><i class="material-icons text-white-50 pr-0 pl-2">keyboard_arrow_right</i>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row">
+                <!-- First Column -->
+                <div class="col-xl-6 border-xl-right-none border-right">
+                  <h5 class="form-title">
+                    <i class="material-icons text-black-50">double_arrow</i>
+                    <span>Reports Settings</span>
+                  </h5>
+
+                  <div class="form-group row required">
+                    <label for="ReportEmails" class="col-xl-4 col-form-label">Send Report To:</label>
+                    <div class="col-xl-8">
+                      <textarea class="form-control text-monospace" id="ReportEmails" rows="5">support@emaildomain.com</textarea>
+                      <small id="ReportEmailsHelper" class="form-text text-muted">
+                        Separate emails by a comma.
+                      </small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="AttachCSV" class="col-xl-4 col-form-label">Attach CSV Report:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="AttachCSV" aria-describedby="AttachCSVHelp" checked/>
+                        <label class="custom-control-label" for="AttachCSV">
+                          <small id="AttachCSVHelp" class="form-text text-muted">
+                            If swicthed ON, all the Registrant info will be written to a CSV file and attached to the email.
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="form-group row">
+                    <label for="selectAll" class="col-xl-4 col-form-label">Include Group:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="selectAll" value="selectAll">
+                          <label class="custom-control-label" for="selectAll"> Select / Deselect All</label>
+                        </div>
+                        <hr class="my-2">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Approved" value="1" checked>
+                          <label class="custom-control-label" for="Approved">Approved</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="ToApprove" value="2" checked>
+                          <label class="custom-control-label" for="ToApprove">To Approve</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="To" value="3" checked>
+                          <label class="custom-control-label" for="To Follow Up">To Follow Up</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="ToReview" value="4" checked>
+                          <label class="custom-control-label" for="ToReview">To Review</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Declined" value="5" checked>
+                          <label class="custom-control-label" for="Declined">Declined</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Rejected" value="6" checked>
+                          <label class="custom-control-label" for="Rejected">Rejected</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Uncontactable" value="7" checked>
+                          <label class="custom-control-label" for="Uncontactable">Uncontactable</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="NotResponded" value="8">
+                          <label class="custom-control-label" for="NotResponded">Not Responded</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="AdminPending" value="9">
+                          <label class="custom-control-label" for="AdminPending">Admin Pending</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="AdminRejected" value="10">
+                          <label class="custom-control-label" for="AdminRejected">Admin Rejected</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Test" value="11">
+                          <label class="custom-control-label" for="Test">Test</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -338,28 +514,40 @@ layout: admin
               </div>
             </div>
 
-            <div id="step3" class="tab-pane fade" role="tabpanel" aria-labelledby="step3-tab">
-              <div class="row">
-                <!-- First Column -->
-                <div class="col-xl-6 border-xl-right-none border-right">
-                  <h3>Step 3</h3>
+            <div id="step4" class="tab-pane" role="tabpanel" aria-labelledby="step4-tab">
+              <div class="row mb-3">
+                <div class="col-6 text-left">
                 </div>
-
-                <!-- Second Column -->
-                <div class="col-xl-6">
+                <div class="col-6 text-right">
+                  <a href="/events/clientcode/2020/eventcode/admin/dashboard.html" class="btn btn-primary">
+                    <span>Go to Admin Dashboard</span><i class="material-icons text-white-50 pr-0 pl-2">keyboard_arrow_right</i>
+                  </a>
                 </div>
               </div>
-            </div>
 
-            <div id="step4" class="tab-pane fade" role="tabpanel" aria-labelledby="step4-tab">
               <div class="row">
-                <!-- First Column -->
-                <div class="col-xl-6 border-xl-right-none border-right">
-                  <h3>Step 4</h3>
-                </div>
+                <div class="col-12">
+                  <h3>Complete</h3>
+                  <p>You have successfully created following campaign.</p>
 
-                <!-- Second Column -->
-                <div class="col-xl-6">
+                  <h5 class="font-weight-bold">Demo Event Festival and Food Fair 2020</h5>
+                  <p>Jump to Event App:</p>
+
+                  <a href="#" class="btn btn-primary mr-md-1 mb-1">
+                    <i class="material-icons text-white-50">home</i><span>Home Page</span>
+                  </a>
+
+                  <a href="#" class="btn btn-primary mr-md-1 mb-1">
+                    <i class="material-icons text-white-50">how_to_reg</i><span>Registration</span>
+                  </a>
+
+                  <a href="#" class="btn btn-primary mr-md-1 mb-1">
+                    <i class="material-icons text-white-50">exit_to_app</i><span>Guest Login</span>
+                  </a>
+
+                  <a href="#" class="btn btn-primary mr-md-1 mb-1">
+                    <i class="material-icons text-white-50">supervisor_account</i><span>Exhibitor Admin</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -370,40 +558,4 @@ layout: admin
   </div>
 </section>
 
-<script type="text/javascript">
-  $(function() {
-    $('#StartDate').datetimepicker({
-      icons: {
-        time: 'far fa-clock',
-        date: 'far fa-calendar',
-        up: 'fas fa-chevron-up',
-        down: 'fas fa-chevron-down',
-        previous: 'fas fa-chevron-left',
-        next: 'fas fa-chevron-right',
-        today: 'fas fa-calendar-check',
-        clear: 'far fa-trash-alt',
-        close: 'far fa-times-circle'
-      },
-      format: 'DD MMM YYYY (ddd)',
-      locale: 'sg',
-      showTodayButton: true
-    });
-
-    $('#EndDate').datetimepicker({
-      icons: {
-        time: 'far fa-clock',
-        date: 'far fa-calendar',
-        up: 'fas fa-chevron-up',
-        down: 'fas fa-chevron-down',
-        previous: 'fas fa-chevron-left',
-        next: 'fas fa-chevron-right',
-        today: 'fas fa-calendar-check',
-        clear: 'far fa-trash-alt',
-        close: 'far fa-times-circle'
-      },
-      format: 'DD MMM YYYY (ddd)',
-      locale: 'sg',
-      showTodayButton: true
-    });
-  })
-</script>
+<%= javascript_include_tag "/js/admin/page/event" %>

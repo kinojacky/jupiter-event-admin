@@ -1,3 +1,4 @@
+// Input form placeholder coloring
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   font-weight: 100;
   color: #ccd1d9;
@@ -12,4 +13,11 @@
 .form-control::-webkit-input-placeholder { /* Microsoft Edge */
   font-weight: 100;
   color: #ccd1d9;
+}
+
+/* Asterisk to required fields */
+.form-group.required .control-label:after,
+.form-group.required .col-form-label:after {
+  content: " *";
+  color: red;
 }
