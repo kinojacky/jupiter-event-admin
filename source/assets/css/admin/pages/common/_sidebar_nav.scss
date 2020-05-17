@@ -81,7 +81,7 @@
   .sidebar-heading {
     padding: 0.875rem 1rem 0.5rem;
     font-weight: 800;
-    font-size: .65rem;
+    font-size: 0.65rem;
     text-transform: uppercase;
   }
 
@@ -118,30 +118,33 @@
       margin: 0.5rem 1rem 0 1rem;
 
       .collapse-inner {
-        padding: .5rem 0;
+        padding: 0.25rem 0;
         min-width: 10rem;
-        font-size: .85rem;
+        font-size: 0.85rem;
         margin: 0 0 1rem 0;
 
         .collapse-header {
           margin: 0;
           white-space: nowrap;
-          padding: .5rem 1.5rem;
+          padding: 0.5rem 1.5rem;
           text-transform: uppercase;
           font-weight: 800;
-          font-size: .65rem;
+          font-size: 0.65rem;
           color: #b7b9cc;
         }
 
         .collapse-item {
-          padding: .5rem 1rem;
-          margin: 0 .5rem;
+          padding: 0.5rem 1rem;
+          margin: 0.25rem 0.5rem;
           display: block;
           color: #3a3b45;
           text-decoration: none;
-          border-radius: .35rem;
+          border-radius: 0.35rem;
           white-space: nowrap;
 
+          &.active,
+          &:active,
+          &:focus,
           &:hover {
             background-color: #eaecf4;
           }
@@ -156,11 +159,11 @@
       padding: 0.75rem 0.825rem;
 
       i {
-        margin-right: .55rem;
+        margin-right: 0.55rem;
       }
 
       span {
-        font-size: .85rem;
+        font-size: 0.85rem;
         display: table-cell;
         vertical-align: middle;
       }
@@ -207,16 +210,16 @@
       i {
         color: rgba(66, 82, 110, .3);
       }
+    }
 
-      &.active,
-      &:active,
-      &:focus,
-      &:hover {
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: #172B4D;
+
+      i {
         color: #172B4D;
-
-        i {
-          color: #172B4D;
-        }
       }
     }
   }
@@ -240,16 +243,16 @@
       i {
         color: rgba(255, 255, 255, .3);
       }
+    }
 
-      &.active,
-      &:active,
-      &:focus,
-      &:hover {
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: #ffffff;
+
+      i {
         color: #ffffff;
-
-        i {
-          color: #ffffff;
-        }
       }
     }
   }

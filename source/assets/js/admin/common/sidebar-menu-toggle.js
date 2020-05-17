@@ -16,6 +16,6 @@
   });
 
   // Sidebar menu Dropdown Script
-  $('#sidebar-secondary .collapse').collapse('hide');
+  // $('#sidebar-secondary .collapse').collapse('hide');
 
 })(jQuery); // End of use strict

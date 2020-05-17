@@ -41,7 +41,16 @@ page '/*.txt', layout: false
 
 helpers do
   def nav_active(page)
-    current_page.url.include?(page) ? "active" : ''
+    # current_page.url.include?(page) ? 'active' : ''
+    current_page.path.include?(page) ? 'active' : ''
+  end
+
+  def nav_show(page)
+    current_page.path.include?(page) ? 'show' : ''
+  end
+
+  def nav_collapsed(page)
+    current_page.path.include?(page) ? '' : 'collapsed'
   end
 end
 
