@@ -53,13 +53,15 @@ end
 #   activate :livereload
 # end
 
-set :js_dir, 'js'
-set :css_dir, 'css'
+set :js_dir, 'assets/js'
+set :css_dir, 'assets/css'
+set :images_dir, 'assets/images'
 
 configure :build do
     activate :relative_assets
-    set :js_dir, 'js'
-    set :css_dir, 'css'
+    set :js_dir, 'assets/js'
+    set :css_dir, 'assets/css'
+    set :images_dir, 'assets/images'
 #   activate :minify_css
 #   activate :minify_javascript
 end
