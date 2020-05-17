@@ -2,14 +2,458 @@
 title: Welcome to Middleman
 layout: dashboard
 ---
-<section>
-  <div class="container-fluid">
+<section id="dashboard">
+  <div class="container">
+    <!-- Page Heading -->
     <div class="row">
-      <div class="col-12">
-        <h1>Event Dashboard</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="col-12 col-xl-6">
+        <h4>
+          <i class="material-icons">dashboard</i><span>Dashboard</span>
+          <i class="material-icons pl-2">keyboard_arrow_right</i>
+          <span class="small text-black-50">Home</span>
+        </h4>
+      </div>
+      <div class="col-12 col-xl-6 text-right">
+        <a href="#" class="btn btn-sm btn-primary shadow-sm d-none d-lg-inline-block mr-md-1 mb-1">
+          <i class="material-icons text-white-50">add</i><span>Add Customer</span>
+        </a>
+        <a href="#" class="btn btn-sm btn-primary shadow-sm d-none d-lg-inline-block mr-md-1 mb-1">
+          <i class="material-icons text-white-50">get_app</i><span>Generate Report</span>
+        </a>
       </div>
     </div>
+
+    <hr>
+
+    <div class="row">
+      <!-- Event-Info Col -->
+      <div class="col-lg-4">
+        <h5 class="font-weight-bold">Demo Event Festival and Food Fair 2020</h5>
+
+        <p class="text-black-50">
+          <i class="material-icons">visibility</i>
+          <span>John Wick</span>
+        </p>
+        <p class="text-black-50">
+          <i class="material-icons">event</i>
+          <span>9 May, 2019 (Thu) - 15 May, 2019 (Thu)</span>
+        </p>
+        <p class="text-black-50">
+          <i class="material-icons">schedule</i>
+          <span>8:00am - 3:30pm</span>
+        </p>
+        <p class="text-black-50">
+          <i class="material-icons">location_on</i>
+          <span>Tainan City Centre Hotel</span>
+        </p>
+        <p class="text-black-50">
+          <i class="material-icons">link</i>
+          <span><a href="https://www.example.com" target="_blank">https://www.example.com</a></span>
+        </p>
+        <p class="text-black-50">
+          <i class="material-icons">mail</i>
+          <span><a href="mailto:email@example.com">email@example.com</a></span>
+        </p>
+      </div>
+
+      <!-- Registration info Col -->
+      <div class="col-lg-4">
+        <h5 class="text-black-50">Registration Status</h5>
+
+        <div class="row">
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-success">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Approved</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">25</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-danger">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Declined</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">45</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-primary">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Not Responded</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">76</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 76%" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-lg-0 mb-3">
+            <a href="" class="info-box alert-info">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Total</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">146</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event-Info Col -->
+      <div class="col-lg-4">
+        <h5 class="text-black-50">Other Status</h5>
+
+        <div class="row">
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-warning">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Review</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">13</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 13%" aria-valuenow="13" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-danger">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Rejected</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">28</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 28%" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-3">
+            <a href="" class="info-box alert-secondary">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Pending</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">63</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 63%" aria-valuenow="63" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Group info box -->
+          <div class="col-12 mb-lg-0 mb-3">
+            <a href="" class="info-box alert-secondary">
+              <div class="d-flex text-black inner">
+                <div class="mr-auto">
+                  <h5 class="mb-0">Test</h5>
+                </div>
+                <div class="ml-auto my-auto">
+                  <h4 class="mb-0">6</h4>
+                </div>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 6%" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <link rel="stylesheet" href="../../../../../css/admin/vendors/apexcharts/apexcharts.css">
+    <script src="../../../../../js/admin/vendors/apexcharts/apexcharts.js" charset="utf-8"></script>
+    <div class="row">
+      <div class="col-12 col-xl-6">
+        <h5 class="text-black-50">Email Subscription</h5>
+        <div class="row">
+          <div class="col-12 col-md-6 px-0">
+            <div id="sendedEmailChart"></div>
+          </div>
+          <div class="col-12 col-md-6 px-0">
+            <div id="unsubChart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-xl-6">
+        <h5 class="text-black-50">SMS Status</h5>
+        <div class="row">
+          <div class="col-12 col-md-6 px-0">
+            <div id="sendedSMSChart"></div>
+          </div>
+          <div class="col-12 col-md-6 px-0">
+            <div id="smsClickThruChart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script type="text/javascript">
+  // Sended Email Chart
+  var sendedEmailOptions = {
+    series: [87],
+    chart: {
+    height: 300,
+    type: 'radialBar',
+    offsetY: 0,
+    // following sparkling and grid is use to fix the svg height issue.
+    sparkline: {
+      enabled: true
+    },
+    grid: {
+      padding: {
+        top: 0,
+        bottom: 0
+      },
+    },
+  },
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 135,
+      dataLabels: {
+        name: {
+          fontSize: '16px',
+          color: undefined,
+          offsetY: 40
+        },
+        value: {
+          offsetY: 0,
+          fontSize: '22px',
+          color: undefined,
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      }
+    }
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+        shade: 'dark',
+        shadeIntensity: 0.15,
+        inverseColors: false,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 50, 65, 91]
+    },
+  },
+  stroke: {
+    dashArray: 4
+  },
+  labels: ['Sended Email'],
+  };
+
+  // Unsub Email Chart
+  var unsubOptions = {
+    series: [22],
+    chart: {
+    height: 300,
+    type: 'radialBar',
+    offsetY: 0,
+    // following sparkling and grid is use to fix the svg height issue.
+    sparkline: {
+      enabled: true
+    },
+    grid: {
+      padding: {
+        top: 0,
+        bottom: 0
+      },
+    },
+  },
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 135,
+      dataLabels: {
+        name: {
+          fontSize: '16px',
+          color: undefined,
+          offsetY: 40
+        },
+        value: {
+          offsetY: 0,
+          fontSize: '22px',
+          color: undefined,
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      }
+    }
+  },
+  fill: {
+    colors: '#dc3545',
+  },
+  stroke: {
+    dashArray: 4
+  },
+  labels: ['Unsub Email'],
+  };
+
+  // Sended SMS Chart
+  var sendedSMSOptions = {
+    series: [99],
+    chart: {
+    height: 300,
+    type: 'radialBar',
+    offsetY: 0,
+    // following sparkling and grid is use to fix the svg height issue.
+    sparkline: {
+      enabled: true
+    },
+    grid: {
+      padding: {
+        top: 0,
+        bottom: 0
+      },
+    },
+  },
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 135,
+      dataLabels: {
+        name: {
+          fontSize: '16px',
+          color: undefined,
+          offsetY: 40
+        },
+        value: {
+          offsetY: 0,
+          fontSize: '22px',
+          color: undefined,
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      }
+    }
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+        shade: 'dark',
+        shadeIntensity: 0.15,
+        inverseColors: false,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 50, 65, 91]
+    },
+  },
+  stroke: {
+    dashArray: 4
+  },
+  labels: ['Sended SMS'],
+  };
+
+  // SMS Click Thru Chart
+  var smsClickThruOptions = {
+    series: [7],
+    chart: {
+    height: 300,
+    type: 'radialBar',
+    offsetY: 0,
+    // following sparkling and grid is use to fix the svg height issue.
+    sparkline: {
+      enabled: true
+    },
+    grid: {
+      padding: {
+        top: 0,
+        bottom: 0
+      },
+    },
+  },
+  plotOptions: {
+    radialBar: {
+      startAngle: -135,
+      endAngle: 135,
+      dataLabels: {
+        name: {
+          fontSize: '16px',
+          color: undefined,
+          offsetY: 40
+        },
+        value: {
+          offsetY: 0,
+          fontSize: '22px',
+          color: undefined,
+          formatter: function (val) {
+            return val + "%";
+          }
+        }
+      }
+    }
+  },
+  fill: {
+    colors: '#28a745',
+  },
+  stroke: {
+    dashArray: 4
+  },
+  labels: ['Click Thru'],
+  };
+
+  var sendedEmailChart = new ApexCharts(document.querySelector("#sendedEmailChart"), sendedEmailOptions);
+  var unsubChart = new ApexCharts(document.querySelector("#unsubChart"), unsubOptions);
+  var sendedSMSChart = new ApexCharts(document.querySelector("#sendedSMSChart"), sendedSMSOptions);
+  var smsClickThruChart = new ApexCharts(document.querySelector("#smsClickThruChart"), smsClickThruOptions);
+  sendedEmailChart.render();
+  unsubChart.render();
+  sendedSMSChart.render();
+  smsClickThruChart.render();
+</script>

@@ -1,0 +1,106 @@
+#dashboard {
+  svg {
+    overflow: inherit;
+    vertical-align: inherit;
+  }
+
+  .status-list-height {
+    height: 43px;
+    border-bottom: 1px solid #dee2e6 !important;
+  }
+
+  .status-badge {
+    float: right;
+    font-size: 90%;
+  }
+
+  .info-box {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.31) 0px 0px 1px 0px;
+    display: block;
+    position: relative;
+
+    .progress {
+      border-radius: 0;
+    }
+
+    &:hover {
+      color: #333333;
+      text-decoration: none;
+
+      .icon {
+        > i {
+          font-size: 85px;
+        }
+
+        > i.fa {
+          font-size: 65px;
+        }
+
+        > i.fab {
+          font-size: 65px;
+        }
+
+        > i.far {
+          font-size: 65px;
+        }
+
+        > i.fas {
+          font-size: 65px;
+        }
+      }
+    }
+
+    > .inner {
+      padding: 10px;
+    }
+
+    .icon {
+      color: rgba(0,0,0,.15);
+      z-index: 0;
+
+      > i {
+        font-size: 90px;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        transition: all 0.3s linear;
+      }
+
+      > i.fa {
+        font-size: 60px;
+        top: 14px;
+      }
+
+      > i.fab {
+        font-size: 60px;
+        top: 14px;
+      }
+
+      > i.far {
+        font-size: 60px;
+        top: 14px;
+      }
+
+      > i.fas {
+        font-size: 60px;
+        top: 14px;
+      }
+    }
+
+    > .info-box-footer {
+      background: rgba(0,0,0,.1);
+      color: rgba(255,255,255,.8);
+      display: block;
+      padding: 3px 0;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      z-index: 10;
+
+      &:hover {
+        background: rgba(0,0,0,.15);
+        color: #fff;
+      }
+    }
+  }
+}
