@@ -8,6 +8,7 @@
 
     if(len == 6){
       console.log("Submit!")
+			$('#Submit').addClass('disabled');
       // document.forms[0].submit();
       window.location.href = "/admin/clients/index.html";
     }
