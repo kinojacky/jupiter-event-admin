@@ -5,15 +5,6 @@ $(document).ready(function() {
         footer: false
     },
     order: [ 4, 'desc' ],
-    columnDefs: [ {
-      orderable: false,
-      className: 'select-checkbox',
-      targets:   0
-    } ],
-    select: {
-      style:    'multi',
-      selector: 'td:first-child'
-    },
     language: {
       search: "Quick Filter:"
     }
@@ -93,13 +84,13 @@ $(document).ready(function() {
 
   $('#selectAll').click(function() {
    if (this.checked) {
-       $('input[name=GroupReports]').each(function() {
-           this.checked = true;
-       });
+     $('input[name=GroupReports]').each(function() {
+       this.checked = true;
+     });
    } else {
-      $('input[name=GroupReports]').each(function() {
-           this.checked = false;
-       });
+    $('input[name=GroupReports]').each(function() {
+       this.checked = false;
+     });
    }
-});
+  });
 });

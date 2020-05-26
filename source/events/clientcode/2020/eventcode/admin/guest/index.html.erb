@@ -2,6 +2,7 @@
 title: Guest List
 layout: dashboard
 ---
+
 <section id="dashboard">
   <div class="container">
     <!-- Page Heading -->
@@ -25,5 +26,334 @@ layout: dashboard
 
     <hr>
 
+    <!-- Event List DataTales -->
+    <div class="table-responsive mb-5">
+      <table class="table table-striped-5n table-hover mb-0" id="GuestDataTable">
+        <thead class="thead-dark">
+          <tr>
+            <th width="20">
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </th>
+            <th>Reg ID</th>
+            <th class="text-left">Name</th>
+            <th class="text-left">Email</th>
+            <th class="text-left"></th>
+            <th class="text-right">Status</th>
+            <th width="40"><i class="material-icons">mail</i></th>
+            <th width="20"></th>
+            <th width="20"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99999</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#confirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99998</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99997</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99996</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99995</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99994</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99993</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99992</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99991</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99990</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99989</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99988</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99987</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              </div>
+            </td>
+            <td class="text-left">#99986</td>
+            <td class="text-left">
+              <span class="name">Guest Name</span><br/>
+              <strong class="company">Company Name Pte. Ltd.</strong>
+            </td>
+            <td class="text-left">email@example.com</td>
+            <td class="text-left text-black-50 small">updated: 12 Jun 13:45</td>
+            <td class="text-right">
+              <span class="btn btn-sm btn-primary">Not Responded</span>
+            </td>
+            <td><i class="material-icons text-primary">done</i></td>
+            <td><a href="#" class="edit"><i class="material-icons">create</i></a></td>
+            <td><a href="#" class="delete" data-toggle="modal" data-target="#ConfirmDelete"><i class="material-icons">delete</i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </section>
+
+<!-- Modal -->
+<div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="confirmDeleteLabel">Delete Guest</h5>
+      </div>
+      <div class="modal-body">
+        Are you confirm to delete this guest?
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">
+          <i class="material-icons text-white-50">close</i><span>Cancel</span>
+        </button>
+        <a href="#" class="btn btn-danger">
+          <i class="material-icons text-white-50">delete</i><span>Delete</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "/assets/js/admin/page/guest_list" %>

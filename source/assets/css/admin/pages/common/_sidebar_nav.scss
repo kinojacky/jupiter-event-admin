@@ -216,9 +216,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: #172B4D;
-
-      i {
+      i, span {
         color: #172B4D;
       }
     }
@@ -249,9 +247,7 @@
     &:active,
     &:focus,
     &:hover {
-      color: #ffffff;
-
-      i {
+      i, span {
         color: #ffffff;
       }
     }

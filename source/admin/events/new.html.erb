@@ -123,38 +123,10 @@ layout: admin
                     <div class="col-xl-4">
                       <select class="form-control" id="EventStatus">
                         <option value="0" selected disabled>Choose...</option>
-                        <option value="1">Testing</option>
-                        <option value="2">Open</option>
-                        <option value="3">Closed</option>
+                        <option value="1">Open</option>
+                        <option value="2">Closed</option>
+                        <option value="3">Testing</option>
                       </select>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="AddToEventRsvpStatus" class="col-xl-4 col-form-label">Default Group:</label>
-                    <div class="col-xl-8">
-                      <select id="AddToEventRsvpStatus" class="form-control">
-                        <option value="0" disabled>Choose...</option>
-                        <option value="2">Approved</option>
-                        <option value="5">To Approve</option>
-                        <option value="7">To Follow Up</option>
-                        <option value="8">To Review</option>
-                        <option value="4">Declined</option>
-                        <option value="3">Rejected</option>
-                        <option value="6">Uncontactable</option>
-                        <option value="1">Not Responded</option>
-                        <option value="10" selected>Admin Pending</option>
-                        <option value="11">Admin Rejected</option>
-                        <option value="9">Test</option>
-                      </select>
-                      <small id="nameHelper" class="text-black-50">When adding customers to event.</small>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="qrcodeFormat" class="col-xl-4 col-form-label">QRCode Format:</label>
-                    <div class="col-xl-8">
-                      <input type="text" class="form-control text-monospace" id="qrcodeFormat" value="[CUSTID].[REGID]"/>
                     </div>
                   </div>
                 </div>
@@ -258,6 +230,98 @@ layout: admin
                 <div class="col-xl-6 border-xl-right-none border-right">
                   <h5 class="form-title">
                     <i class="material-icons text-black-50">double_arrow</i>
+                    <span>Registration Settings</span>
+                  </h5>
+
+                  <div class="form-group row">
+                    <label for="AddToEventRsvpStatus" class="col-xl-4 col-form-label">Default Group:</label>
+                    <div class="col-xl-8">
+                      <select id="AddToEventRsvpStatus" class="form-control">
+                        <option value="0" disabled>Choose...</option>
+                        <option value="1">Approved</option>
+                        <option value="2">Declined</option>
+                        <option value="3">Not Responded</option>
+                        <option value="4">Review</option>
+                        <option value="5">Rejected</option>
+                        <option value="6" selected>Pending</option>
+                        <option value="7">Test</option>
+                      </select>
+                      <small id="nameHelper" class="text-black-50">When adding customers to event.</small>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="IsAutoApproved" class="col-xl-4 col-form-label">Auto Approved:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsAutoApproved" aria-describedby="IsAutoApprovedHelp"/>
+                        <label class="custom-control-label" for="IsAutoApproved">
+                          <small id="IsAutoApprovedHelp" class="form-text text-muted">
+                            <p>Registrant will be automatically approved once registrant registers online or RSVP email.</p>
+                            <p class="mb-0">If NOT, RSVP group will be send to "Review" and acknowledgement email will nees to manually send by the Administrator.</p>
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="IsRsvpOn" class="col-xl-4 col-form-label">Auto Update RSVP:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsRsvpOn" aria-describedby="IsRsvpOnHelp" checked/>
+                        <label class="custom-control-label" for="IsRsvpOn">
+                          <small id="IsRsvpOnHelp" class="form-text text-muted">
+                            Registrant can update his/her group from the RSVP Email invite.
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <label for="qrcodeFormat" class="col-xl-4 col-form-label">QRCode Format:</label>
+                    <div class="col-xl-8">
+                      <input type="text" class="form-control text-monospace" id="qrcodeFormat" value="[GUSTID].[REGID]"/>
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <h5 class="form-title">
+                    <i class="material-icons text-black-50">double_arrow</i>
+                    <span>Notification Settings</span>
+                  </h5>
+
+                  <div class="form-group row">
+                    <label for="IsNotifyOn" class="col-xl-4 col-form-label">Email Notification:</label>
+                    <div class="col-xl-8">
+                      <div class="form-control-plaintext custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="IsNotifyOn" aria-describedby="IsNotifyOnHelp"/>
+                        <label class="custom-control-label" for="IsNotifyOn">
+                          <small id="IsNotifyOnHelp" class="form-text text-muted">
+                            Notification email will send each time when registration or registrant update.
+                          </small>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group row required">
+                    <label for="NotifyEmail" class="col-xl-4 col-form-label">Notification Emails:</label>
+                    <div class="col-xl-8">
+                      <textarea class="form-control" id="NotifyEmail" rows="5">notification@emaildomain.com</textarea>
+                      <small id="NotifyEmailHelper" class="form-text text-muted">
+                        Separate emails by a comma.
+                      </small>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-xl-6">
+                  <h5 class="form-title">
+                    <i class="material-icons text-black-50">double_arrow</i>
                     <span>Email Settings</span>
                   </h5>
 
@@ -265,9 +329,6 @@ layout: admin
                     <label for="FromEmail" class="col-xl-4 col-form-label">From Email:</label>
                     <div class="col-xl-8">
                       <input type="text" class="form-control" id="FromEmail" value="donotreply@emaildomain.com" aria-describedby="LinkHelp"/>
-                      <small id="LinkHelp" class="form-text text-muted">
-                        This is the email we send from, whenever sending any email invites, acknowledgments etc...
-                      </small>
                     </div>
                   </div>
 
@@ -275,9 +336,6 @@ layout: admin
                     <label for="FromName" class="col-xl-4 col-form-label">From Name:</label>
                     <div class="col-xl-8">
                       <input type="text" class="form-control" id="FromName" value="Events Management" aria-describedby="FromNameHelp"/>
-                      <small id="FromNameHelp" class="form-text text-muted">
-                        This is the Name that appears in the "From" field of the recipient's email client.
-                      </small>
                     </div>
                   </div>
 
@@ -296,70 +354,12 @@ layout: admin
                   </div>
 
                   <div class="form-group row">
-                    <label for="IsAutoApproved" class="col-xl-4 col-form-label">Registrant Auto-Approved:</label>
-                    <div class="col-xl-8">
-                      <div class="form-control-plaintext custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="IsAutoApproved" aria-describedby="IsAutoApprovedHelp"/>
-                        <label class="custom-control-label" for="IsAutoApproved">
-                          <small id="IsAutoApprovedHelp" class="form-text text-muted">
-                            <p>If on, the registrant will be automatically approved once registrant registers online. RSVP status will be set to "approved", and registrant will receive the acknowledgement.</p>
-                            <p>If NOT, RSVP status will be set to "To Approve" and registrant will receive the acknowledgement email but registrant will then have to be approved manually by the Administrator.</p>
-                          </small>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
-                    <label for="IsRsvpOn" class="col-xl-4 col-form-label">RSVP:</label>
-                    <div class="col-xl-8">
-                      <div class="form-control-plaintext custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="IsRsvpOn" aria-describedby="IsRsvpOnHelp" checked/>
-                        <label class="custom-control-label" for="IsRsvpOn">
-                          <small id="IsRsvpOnHelp" class="form-text text-muted">
-                            If on, registrant can update his/her status from the RSVP Email invite, and also login from public page. Also Admin and clients can generate reports from Report eDM.
-                          </small>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Second Column -->
-                <div class="col-xl-6">
-                  <h5 class="form-title">
-                    <i class="material-icons text-black-50">double_arrow</i>
-                    <span>Notification Settings</span>
-                  </h5>
-
-                  <div class="form-group row">
-                    <label for="IsNotifyOn" class="col-xl-4 col-form-label">Email Notification:</label>
-                    <div class="col-xl-8">
-                      <div class="form-control-plaintext custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="IsNotifyOn" aria-describedby="IsNotifyOnHelp"/>
-                        <label class="custom-control-label" for="IsNotifyOn">
-                          <small id="IsNotifyOnHelp" class="form-text text-muted">
-                            If on, you will be notified by email each time there is a registration or registrant update.
-                          </small>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="form-group row required">
-                    <label for="NotifyEmail" class="col-xl-4 col-form-label">Notification Emails:</label>
-                    <div class="col-xl-8">
-                      <textarea class="form-control" id="NotifyEmail" rows="3">notification@emaildomain.com</textarea>
-                    </div>
-                  </div>
-
-                  <div class="form-group row">
                     <label for="FieldName" class="col-xl-4 col-form-label">Subscribers Groups:</label>
                     <div class="col-xl-8">
                       <div class="form-control-plaintext">
                         <div class="custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="Subscribe">
-                          <label class="custom-control-label" for="Subscribe">Subscribe</label>
+                          <label class="custom-control-label" for="Subscribe">Subscribed</label>
                         </div>
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="Unsubscribe">
@@ -368,31 +368,31 @@ layout: admin
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="eDMGroup1">
                           <label class="custom-control-label" for="eDMGroup1">
-                            <input type="text" class="form-control form-control-sm" id="eDMGroupName1" placeholder="eDM Group Name"/>
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName1" placeholder="Custom Group"/>
                           </label>
                         </div>
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="eDMGroup2">
                           <label class="custom-control-label" for="eDMGroup2">
-                            <input type="text" class="form-control form-control-sm" id="eDMGroupName2" placeholder="eDM Group Name"/>
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName2" placeholder="Custom Group"/>
                           </label>
                         </div>
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="eDMGroup3">
                           <label class="custom-control-label" for="eDMGroup3">
-                            <input type="text" class="form-control form-control-sm" id="eDMGroupName3" placeholder="eDM Group Name"/>
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName3" placeholder="Custom Group"/>
                           </label>
                         </div>
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="eDMGroup4">
                           <label class="custom-control-label" for="eDMGroup4">
-                            <input type="text" class="form-control form-control-sm" id="eDMGroupName4" placeholder="eDM Group Name"/>
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName4" placeholder="Custom Group"/>
                           </label>
                         </div>
                         <div class="custom-control custom-checkbox mt-1">
                           <input type="checkbox" class="custom-control-input" id="eDMGroup5">
                           <label class="custom-control-label" for="eDMGroup5">
-                            <input type="text" class="form-control form-control-sm" id="eDMGroupName5" placeholder="eDM Group Name"/>
+                            <input type="text" class="form-control form-control-sm" id="eDMGroupName5" placeholder="Custom Group"/>
                           </label>
                         </div>
                       </div>
@@ -464,43 +464,27 @@ layout: admin
                           <label class="custom-control-label" for="Approved">Approved</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="ToApprove" value="2" checked>
-                          <label class="custom-control-label" for="ToApprove">To Approve</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="To" value="3" checked>
-                          <label class="custom-control-label" for="To Follow Up">To Follow Up</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="ToReview" value="4" checked>
-                          <label class="custom-control-label" for="ToReview">To Review</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Declined" value="5" checked>
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Declined" value="2" checked>
                           <label class="custom-control-label" for="Declined">Declined</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Rejected" value="6" checked>
-                          <label class="custom-control-label" for="Rejected">Rejected</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Uncontactable" value="7" checked>
-                          <label class="custom-control-label" for="Uncontactable">Uncontactable</label>
-                        </div>
-                        <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="NotResponded" value="8">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="NotResponded" value="3"checked>
                           <label class="custom-control-label" for="NotResponded">Not Responded</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="AdminPending" value="9">
-                          <label class="custom-control-label" for="AdminPending">Admin Pending</label>
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Review" value="4" checked>
+                          <label class="custom-control-label" for="Review">Review</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="AdminRejected" value="10">
-                          <label class="custom-control-label" for="AdminRejected">Admin Rejected</label>
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Rejected" value="5" checked>
+                          <label class="custom-control-label" for="Rejected">Rejected</label>
                         </div>
                         <div class="custom-control custom-checkbox">
-                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Test" value="11">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Pending" value="6">
+                          <label class="custom-control-label" for="Pending">Pending</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" name="GroupReports" id="Test" value="7">
                           <label class="custom-control-label" for="Test">Test</label>
                         </div>
                       </div>

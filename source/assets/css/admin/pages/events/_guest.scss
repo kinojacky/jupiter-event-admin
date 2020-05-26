@@ -1,0 +1,20 @@
+#GuestDataTable {
+  tbody td {
+    .form-check-input {
+      margin-top: 0;
+    }
+
+    .company {
+      font-style: italic;
+      color: rgba(128,128,128, 0.5);
+    }
+  }
+
+  a {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
